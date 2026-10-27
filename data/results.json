@@ -1,0 +1,1628 @@
+{
+ "n_entries": 20195,
+ "n_places": 12812,
+ "n_places_direct": 11466,
+ "n_waste_entries": 1345,
+ "n_waste_entries_yks": 519,
+ "n_waste_entries_study": 1069,
+ "share_waste_entries_in_study": 0.7947955390334572,
+ "share_waste_entries_in_yks": 0.3858736059479554,
+ "n_counties_with_waste": 27,
+ "regions": {
+  "North-east Wales": {
+   "region": "North-east Wales",
+   "county": "CHS",
+   "places": 81,
+   "places_direct": 72,
+   "waste_direct": 0.8194444444444444,
+   "waste_broad": 0.8395061728395061,
+   "waste_1086_direct": 0.3611111111111111,
+   "waste_entries": 43,
+   "waste_entries_no_1086_value": 16,
+   "paired_entries": 9,
+   "value1066": 3900.0,
+   "value1086": 2856.0,
+   "value_ratio": 0.7323076923076923,
+   "value_ratio_both_only": 1.0127659574468084
+  },
+  "Cheshire": {
+   "region": "Cheshire",
+   "county": "CHS",
+   "places": 258,
+   "places_direct": 257,
+   "waste_direct": 0.6108949416342413,
+   "waste_broad": 0.627906976744186,
+   "waste_1086_direct": 0.14007782101167315,
+   "waste_entries": 171,
+   "waste_entries_no_1086_value": 40,
+   "paired_entries": 233,
+   "value1066": 111259.0,
+   "value1086": 46625.0,
+   "value_ratio": 0.419067221528146,
+   "value_ratio_both_only": 0.42667581789064285
+  },
+  "Yorkshire": {
+   "region": "Yorkshire",
+   "county": "YKS",
+   "places": 1786,
+   "places_direct": 1302,
+   "waste_direct": 0.3740399385560676,
+   "waste_broad": 0.5005599104143337,
+   "waste_1086_direct": 0.3141321044546851,
+   "waste_entries": 518,
+   "waste_entries_no_1086_value": 428,
+   "paired_entries": 781,
+   "value1066": 744652.0,
+   "value1086": 260629.0,
+   "value_ratio": 0.3500010743273368,
+   "value_ratio_both_only": 0.3922961370806541
+  },
+  "Shropshire": {
+   "region": "Shropshire",
+   "county": "SHR",
+   "places": 427,
+   "places_direct": 407,
+   "waste_direct": 0.32678132678132676,
+   "waste_broad": 0.3583138173302108,
+   "waste_1086_direct": 0.085995085995086,
+   "waste_entries": 167,
+   "waste_entries_no_1086_value": 45,
+   "paired_entries": 397,
+   "value1066": 212453.0,
+   "value1086": 181810.0,
+   "value_ratio": 0.8557657458355495,
+   "value_ratio_both_only": 0.8637670142765518
+  },
+  "Herefordshire": {
+   "region": "Herefordshire",
+   "county": "HEF",
+   "places": 298,
+   "places_direct": 277,
+   "waste_direct": 0.3140794223826715,
+   "waste_broad": 0.2986577181208054,
+   "waste_1086_direct": 0.1263537906137184,
+   "waste_entries": 85,
+   "waste_entries_no_1086_value": 31,
+   "paired_entries": 245,
+   "value1066": 159289.0,
+   "value1086": 156256.0,
+   "value_ratio": 0.9809591371657804,
+   "value_ratio_both_only": 0.9822170537762831
+  },
+  "Derbyshire": {
+   "region": "Derbyshire",
+   "county": "DBY",
+   "places": 322,
+   "places_direct": 211,
+   "waste_direct": 0.1990521327014218,
+   "waste_broad": 0.2639751552795031,
+   "waste_1086_direct": 0.12322274881516587,
+   "waste_entries": 49,
+   "waste_entries_no_1086_value": 30,
+   "paired_entries": 191,
+   "value1066": 143964.0,
+   "value1086": 101696.0,
+   "value_ratio": 0.7063988219277042,
+   "value_ratio_both_only": 0.7227038858409847
+  },
+  "Staffordshire": {
+   "region": "Staffordshire",
+   "county": "STS",
+   "places": 323,
+   "places_direct": 265,
+   "waste_direct": 0.19622641509433963,
+   "waste_broad": 0.23839009287925697,
+   "waste_1086_direct": 0.16981132075471697,
+   "waste_entries": 56,
+   "waste_entries_no_1086_value": 47,
+   "paired_entries": 89,
+   "value1066": 56387.0,
+   "value1086": 61559.0,
+   "value_ratio": 1.0917232695479455,
+   "value_ratio_both_only": 1.0917232695479455
+  },
+  "Nottinghamshire": {
+   "region": "Nottinghamshire",
+   "county": "NTT",
+   "places": 289,
+   "places_direct": 274,
+   "waste_direct": 0.18613138686131386,
+   "waste_broad": 0.22491349480968859,
+   "waste_1086_direct": 0.1386861313868613,
+   "waste_entries": 61,
+   "waste_entries_no_1086_value": 41,
+   "paired_entries": 299,
+   "value1066": 200848.0,
+   "value1086": 164792.0,
+   "value_ratio": 0.8204811598820999,
+   "value_ratio_both_only": 0.8242237516005122
+  },
+  "Leicestershire": {
+   "region": "Leicestershire",
+   "county": "LEC",
+   "places": 285,
+   "places_direct": 262,
+   "waste_direct": 0.10687022900763359,
+   "waste_broad": 0.21403508771929824,
+   "waste_1086_direct": 0.022900763358778626,
+   "waste_entries": 28,
+   "waste_entries_no_1086_value": 8,
+   "paired_entries": 340,
+   "value1066": 97970.0,
+   "value1086": 171120.0,
+   "value_ratio": 1.7466571399407982,
+   "value_ratio_both_only": 1.7466571399407982
+  },
+  "Lincolnshire": {
+   "region": "Lincolnshire",
+   "county": "LIN",
+   "places": 744,
+   "places_direct": 712,
+   "waste_direct": 0.0702247191011236,
+   "waste_broad": 0.11290322580645161,
+   "waste_1086_direct": 0.0449438202247191,
+   "waste_entries": 57,
+   "waste_entries_no_1086_value": 41,
+   "paired_entries": 767,
+   "value1066": 714108.0,
+   "value1086": 804228.0,
+   "value_ratio": 1.1261993984103245,
+   "value_ratio_both_only": 1.1261993984103245
+  },
+  "Worcestershire": {
+   "region": "Worcestershire",
+   "county": "WOR",
+   "places": 246,
+   "places_direct": 200,
+   "waste_direct": 0.06,
+   "waste_broad": 0.13008130081300814,
+   "waste_1086_direct": 0.005,
+   "waste_entries": 14,
+   "waste_entries_no_1086_value": 1,
+   "paired_entries": 196,
+   "value1066": 185372.0,
+   "value1086": 165800.0,
+   "value_ratio": 0.8944177114127269,
+   "value_ratio_both_only": 0.8947073044379209
+  },
+  "Lancashire north of the Ribble": {
+   "region": "Lancashire north of the Ribble",
+   "county": "YKS",
+   "places": 162,
+   "places_direct": 17,
+   "waste_direct": 0.058823529411764705,
+   "waste_broad": 0.3395061728395062,
+   "waste_1086_direct": 0.058823529411764705,
+   "waste_entries": 1,
+   "waste_entries_no_1086_value": 1,
+   "paired_entries": 0,
+   "value1066": 0.0,
+   "value1086": 0.0,
+   "value_ratio": null,
+   "value_ratio_both_only": null
+  },
+  "Northamptonshire": {
+   "region": "Northamptonshire",
+   "county": "NTH",
+   "places": 316,
+   "places_direct": 312,
+   "waste_direct": 0.05128205128205128,
+   "waste_broad": 0.07278481012658228,
+   "waste_1086_direct": 0.02564102564102564,
+   "waste_entries": 19,
+   "waste_entries_no_1086_value": 9,
+   "paired_entries": 479,
+   "value1066": 262502.0,
+   "value1086": 377794.0,
+   "value_ratio": 1.4392042727293506,
+   "value_ratio_both_only": 1.4392042727293506
+  },
+  "Lancashire between Ribble and Mersey": {
+   "region": "Lancashire between Ribble and Mersey",
+   "county": "CHS",
+   "places": 55,
+   "places_direct": 52,
+   "waste_direct": 0.038461538461538464,
+   "waste_broad": 0.03636363636363636,
+   "waste_1086_direct": 0.019230769230769232,
+   "waste_entries": 3,
+   "waste_entries_no_1086_value": 2,
+   "paired_entries": 0,
+   "value1066": 0.0,
+   "value1086": 0.0,
+   "value_ratio": null,
+   "value_ratio_both_only": null
+  },
+  "Huntingdonshire": {
+   "region": "Huntingdonshire",
+   "county": "HUN",
+   "places": 86,
+   "places_direct": 84,
+   "waste_direct": 0.03571428571428571,
+   "waste_broad": 0.03488372093023256,
+   "waste_1086_direct": 0.011904761904761904,
+   "waste_entries": 4,
+   "waste_entries_no_1086_value": 2,
+   "paired_entries": 116,
+   "value1066": 185028.0,
+   "value1086": 170588.0,
+   "value_ratio": 0.9219577577447737,
+   "value_ratio_both_only": 0.9219577577447737
+  },
+  "Warwickshire": {
+   "region": "Warwickshire",
+   "county": "WAR",
+   "places": 275,
+   "places_direct": 266,
+   "waste_direct": 0.03007518796992481,
+   "waste_broad": 0.03272727272727273,
+   "waste_1086_direct": 0.011278195488721804,
+   "waste_entries": 7,
+   "waste_entries_no_1086_value": 3,
+   "paired_entries": 330,
+   "value1066": 226552.0,
+   "value1086": 322472.0,
+   "value_ratio": 1.4233906564497334,
+   "value_ratio_both_only": 1.4238431649593783
+  },
+  "Devon": {
+   "region": "Devon",
+   "county": "DEV",
+   "places": 896,
+   "places_direct": 851,
+   "waste_direct": 0.021151586368977675,
+   "waste_broad": 0.020089285714285716,
+   "waste_1086_direct": 0.0023501762632197414,
+   "waste_entries": 19,
+   "waste_entries_no_1086_value": 2,
+   "paired_entries": 872,
+   "value1066": 361474.0,
+   "value1086": 417694.0,
+   "value_ratio": 1.1555298583023952,
+   "value_ratio_both_only": 1.1555298583023952
+  },
+  "Sussex": {
+   "region": "Sussex",
+   "county": "SUS",
+   "places": 318,
+   "places_direct": 309,
+   "waste_direct": 0.019417475728155338,
+   "waste_broad": 0.0220125786163522,
+   "waste_1086_direct": 0.003236245954692557,
+   "waste_entries": 8,
+   "waste_entries_no_1086_value": 2,
+   "paired_entries": 403,
+   "value1066": 794734.0,
+   "value1086": 707475.0,
+   "value_ratio": 0.8902035146350854,
+   "value_ratio_both_only": 0.8902035146350854
+  },
+  "Buckinghamshire": {
+   "region": "Buckinghamshire",
+   "county": "BUK",
+   "places": 211,
+   "places_direct": 210,
+   "waste_direct": 0.01904761904761905,
+   "waste_broad": 0.018957345971563982,
+   "waste_1086_direct": 0.009523809523809525,
+   "waste_entries": 4,
+   "waste_entries_no_1086_value": 2,
+   "paired_entries": 372,
+   "value1066": 428435.0,
+   "value1086": 416119.0,
+   "value_ratio": 0.9712535157024986,
+   "value_ratio_both_only": 0.9712535157024986
+  },
+  "Bedfordshire": {
+   "region": "Bedfordshire",
+   "county": "BDF",
+   "places": 141,
+   "places_direct": 141,
+   "waste_direct": 0.014184397163120567,
+   "waste_broad": 0.014184397163120567,
+   "waste_1086_direct": 0.0070921985815602835,
+   "waste_entries": 2,
+   "waste_entries_no_1086_value": 1,
+   "paired_entries": 336,
+   "value1066": 297136.0,
+   "value1086": 224556.0,
+   "value_ratio": 0.7557347477249475,
+   "value_ratio_both_only": 0.7563456563914637
+  },
+  "Somerset": {
+   "region": "Somerset",
+   "county": "SOM",
+   "places": 573,
+   "places_direct": 535,
+   "waste_direct": 0.013084112149532711,
+   "waste_broad": 0.013961605584642234,
+   "waste_1086_direct": 0.001869158878504673,
+   "waste_entries": 7,
+   "waste_entries_no_1086_value": 1,
+   "paired_entries": 429,
+   "value1066": 321827.0,
+   "value1086": 376313.5,
+   "value_ratio": 1.1693036942208082,
+   "value_ratio_both_only": 1.1693036942208082
+  },
+  "Gloucestershire": {
+   "region": "Gloucestershire",
+   "county": "GLS",
+   "places": 408,
+   "places_direct": 332,
+   "waste_direct": 0.012048192771084338,
+   "waste_broad": 0.01715686274509804,
+   "waste_1086_direct": 0.009036144578313253,
+   "waste_entries": 1,
+   "waste_entries_no_1086_value": 0,
+   "paired_entries": 326,
+   "value1066": 552745.0,
+   "value1086": 523982.0,
+   "value_ratio": 0.9479633465702991,
+   "value_ratio_both_only": 0.9479633465702991
+  },
+  "Oxfordshire": {
+   "region": "Oxfordshire",
+   "county": "OXF",
+   "places": 254,
+   "places_direct": 250,
+   "waste_direct": 0.012,
+   "waste_broad": 0.011811023622047244,
+   "waste_1086_direct": 0.012,
+   "waste_entries": 7,
+   "waste_entries_no_1086_value": 6,
+   "paired_entries": 356,
+   "value1066": 465684.0,
+   "value1086": 562842.0,
+   "value_ratio": 1.2086350400700905,
+   "value_ratio_both_only": 1.2105066198673446
+  },
+  "Essex": {
+   "region": "Essex",
+   "county": "ESS",
+   "places": 397,
+   "places_direct": 383,
+   "waste_direct": 0.007832898172323759,
+   "waste_broad": 0.007556675062972292,
+   "waste_1086_direct": 0.0,
+   "waste_entries": 4,
+   "waste_entries_no_1086_value": 0,
+   "paired_entries": 673,
+   "value1066": 872687.0,
+   "value1086": 1088785.0,
+   "value_ratio": 1.2476237184695085,
+   "value_ratio_both_only": 1.2476237184695085
+  },
+  "Hampshire": {
+   "region": "Hampshire",
+   "county": "HAM",
+   "places": 424,
+   "places_direct": 404,
+   "waste_direct": 0.007425742574257425,
+   "waste_broad": 0.007075471698113208,
+   "waste_1086_direct": 0.0024752475247524753,
+   "waste_entries": 3,
+   "waste_entries_no_1086_value": 1,
+   "paired_entries": 498,
+   "value1066": 734028.0,
+   "value1086": 725732.0,
+   "value_ratio": 0.9886979788236961,
+   "value_ratio_both_only": 0.9888596390828278
+  },
+  "Berkshire": {
+   "region": "Berkshire",
+   "county": "BRK",
+   "places": 211,
+   "places_direct": 210,
+   "waste_direct": 0.004761904761904762,
+   "waste_broad": 0.009478672985781991,
+   "waste_1086_direct": 0.0,
+   "waste_entries": 1,
+   "waste_entries_no_1086_value": 0,
+   "paired_entries": 277,
+   "value1066": 591755.0,
+   "value1086": 565833.0,
+   "value_ratio": 0.9561947089589442,
+   "value_ratio_both_only": 0.9561947089589442
+  },
+  "Suffolk": {
+   "region": "Suffolk",
+   "county": "SUF",
+   "places": 544,
+   "places_direct": 525,
+   "waste_direct": 0.0038095238095238095,
+   "waste_broad": 0.003676470588235294,
+   "waste_1086_direct": 0.0,
+   "waste_entries": 3,
+   "waste_entries_no_1086_value": 1,
+   "paired_entries": 810,
+   "value1066": 604195.0,
+   "value1086": 809240.5,
+   "value_ratio": 1.339369739901853,
+   "value_ratio_both_only": 1.339369739901853
+  },
+  "Wiltshire": {
+   "region": "Wiltshire",
+   "county": "WIL",
+   "places": 313,
+   "places_direct": 308,
+   "waste_direct": 0.003246753246753247,
+   "waste_broad": 0.003194888178913738,
+   "waste_1086_direct": 0.0,
+   "waste_entries": 1,
+   "waste_entries_no_1086_value": 0,
+   "paired_entries": 339,
+   "value1066": 463215.0,
+   "value1086": 532324.0,
+   "value_ratio": 1.1491942186673574,
+   "value_ratio_both_only": 1.1491942186673574
+  },
+  "Norfolk": {
+   "region": "Norfolk",
+   "county": "NFK",
+   "places": 671,
+   "places_direct": 609,
+   "waste_direct": 0.0016420361247947454,
+   "waste_broad": 0.0014903129657228018,
+   "waste_1086_direct": 0.0016420361247947454,
+   "waste_entries": 1,
+   "waste_entries_no_1086_value": 1,
+   "paired_entries": 825,
+   "value1066": 554523.0,
+   "value1086": 882953.5,
+   "value_ratio": 1.5922757036227533,
+   "value_ratio_both_only": 1.5922757036227533
+  },
+  "Cambridgeshire": {
+   "region": "Cambridgeshire",
+   "county": "CAM",
+   "places": 137,
+   "places_direct": 135,
+   "waste_direct": 0.0,
+   "waste_broad": 0.0,
+   "waste_1086_direct": 0.0,
+   "waste_entries": 0,
+   "waste_entries_no_1086_value": 0,
+   "paired_entries": 367,
+   "value1066": 413877.0,
+   "value1086": 354473.0,
+   "value_ratio": 0.8564694341555583,
+   "value_ratio_both_only": 0.8564694341555583
+  },
+  "Middlesex": {
+   "region": "Middlesex",
+   "county": "MDX",
+   "places": 59,
+   "places_direct": 57,
+   "waste_direct": 0.0,
+   "waste_broad": 0.0,
+   "waste_1086_direct": 0.0,
+   "waste_entries": 0,
+   "waste_entries_no_1086_value": 0,
+   "paired_entries": 91,
+   "value1066": 216016.0,
+   "value1086": 176532.0,
+   "value_ratio": 0.8172172431671728,
+   "value_ratio_both_only": 0.8172172431671728
+  },
+  "Hertfordshire": {
+   "region": "Hertfordshire",
+   "county": "HRT",
+   "places": 158,
+   "places_direct": 158,
+   "waste_direct": 0.0,
+   "waste_broad": 0.0,
+   "waste_1086_direct": 0.0,
+   "waste_entries": 0,
+   "waste_entries_no_1086_value": 0,
+   "paired_entries": 298,
+   "value1066": 397722.0,
+   "value1086": 327777.0,
+   "value_ratio": 0.8241359542595079,
+   "value_ratio_both_only": 0.8241359542595079
+  },
+  "Cornwall": {
+   "region": "Cornwall",
+   "county": "CON",
+   "places": 315,
+   "places_direct": 296,
+   "waste_direct": 0.0,
+   "waste_broad": 0.0,
+   "waste_1086_direct": 0.0,
+   "waste_entries": 0,
+   "waste_entries_no_1086_value": 0,
+   "paired_entries": 277,
+   "value1066": 143108.0,
+   "value1086": 123039.0,
+   "value_ratio": 0.8597632557229505,
+   "value_ratio_both_only": 0.8597632557229505
+  },
+  "Dorset": {
+   "region": "Dorset",
+   "county": "DOR",
+   "places": 306,
+   "places_direct": 292,
+   "waste_direct": 0.0,
+   "waste_broad": 0.0,
+   "waste_1086_direct": 0.0,
+   "waste_entries": 1,
+   "waste_entries_no_1086_value": 1,
+   "paired_entries": 267,
+   "value1066": 321506.0,
+   "value1086": 341072.0,
+   "value_ratio": 1.0608573401429522,
+   "value_ratio_both_only": 1.0608573401429522
+  },
+  "Kent": {
+   "region": "Kent",
+   "county": "KEN",
+   "places": 345,
+   "places_direct": 321,
+   "waste_direct": 0.0,
+   "waste_broad": 0.0,
+   "waste_1086_direct": 0.0,
+   "waste_entries": 0,
+   "waste_entries_no_1086_value": 0,
+   "paired_entries": 391,
+   "value1066": 909177.0,
+   "value1086": 1083036.0,
+   "value_ratio": 1.191226790822909,
+   "value_ratio_both_only": 1.191226790822909
+  },
+  "Rutland": {
+   "region": "Rutland",
+   "county": "RUT",
+   "places": 36,
+   "places_direct": 31,
+   "waste_direct": 0.0,
+   "waste_broad": 0.0,
+   "waste_1086_direct": 0.0,
+   "waste_entries": 0,
+   "waste_entries_no_1086_value": 0,
+   "paired_entries": 13,
+   "value1066": 15600.0,
+   "value1086": 22560.0,
+   "value_ratio": 1.4461538461538461,
+   "value_ratio_both_only": 1.4461538461538461
+  },
+  "Surrey": {
+   "region": "Surrey",
+   "county": "SUR",
+   "places": 142,
+   "places_direct": 139,
+   "waste_direct": 0.0,
+   "waste_broad": 0.0,
+   "waste_1086_direct": 0.0,
+   "waste_entries": 0,
+   "waste_entries_no_1086_value": 0,
+   "paired_entries": 174,
+   "value1066": 330921.0,
+   "value1086": 340406.0,
+   "value_ratio": 1.028662430005953,
+   "value_ratio_both_only": 1.028662430005953
+  }
+ },
+ "county_rank": [
+  {
+   "region": "Cheshire",
+   "waste": 0.6108949416342413,
+   "ratio": 0.419067221528146
+  },
+  {
+   "region": "Yorkshire",
+   "waste": 0.3740399385560676,
+   "ratio": 0.3500010743273368
+  },
+  {
+   "region": "Shropshire",
+   "waste": 0.32678132678132676,
+   "ratio": 0.8557657458355495
+  },
+  {
+   "region": "Herefordshire",
+   "waste": 0.3140794223826715,
+   "ratio": 0.9809591371657804
+  },
+  {
+   "region": "Derbyshire",
+   "waste": 0.1990521327014218,
+   "ratio": 0.7063988219277042
+  },
+  {
+   "region": "Staffordshire",
+   "waste": 0.19622641509433963,
+   "ratio": 1.0917232695479455
+  },
+  {
+   "region": "Nottinghamshire",
+   "waste": 0.18613138686131386,
+   "ratio": 0.8204811598820999
+  },
+  {
+   "region": "Leicestershire",
+   "waste": 0.10687022900763359,
+   "ratio": 1.7466571399407982
+  },
+  {
+   "region": "Lincolnshire",
+   "waste": 0.0702247191011236,
+   "ratio": 1.1261993984103245
+  },
+  {
+   "region": "Worcestershire",
+   "waste": 0.06,
+   "ratio": 0.8944177114127269
+  },
+  {
+   "region": "Northamptonshire",
+   "waste": 0.05128205128205128,
+   "ratio": 1.4392042727293506
+  },
+  {
+   "region": "Warwickshire",
+   "waste": 0.03007518796992481,
+   "ratio": 1.4233906564497334
+  },
+  {
+   "region": "Devon",
+   "waste": 0.021151586368977675,
+   "ratio": 1.1555298583023952
+  },
+  {
+   "region": "Sussex",
+   "waste": 0.019417475728155338,
+   "ratio": 0.8902035146350854
+  },
+  {
+   "region": "Buckinghamshire",
+   "waste": 0.01904761904761905,
+   "ratio": 0.9712535157024986
+  },
+  {
+   "region": "Somerset",
+   "waste": 0.013084112149532711,
+   "ratio": 1.1693036942208082
+  },
+  {
+   "region": "Gloucestershire",
+   "waste": 0.012048192771084338,
+   "ratio": 0.9479633465702991
+  },
+  {
+   "region": "Oxfordshire",
+   "waste": 0.012,
+   "ratio": 1.2086350400700905
+  },
+  {
+   "region": "Essex",
+   "waste": 0.007832898172323759,
+   "ratio": 1.2476237184695085
+  },
+  {
+   "region": "Hampshire",
+   "waste": 0.007425742574257425,
+   "ratio": 0.9886979788236961
+  },
+  {
+   "region": "Berkshire",
+   "waste": 0.004761904761904762,
+   "ratio": 0.9561947089589442
+  },
+  {
+   "region": "Suffolk",
+   "waste": 0.0038095238095238095,
+   "ratio": 1.339369739901853
+  },
+  {
+   "region": "Wiltshire",
+   "waste": 0.003246753246753247,
+   "ratio": 1.1491942186673574
+  },
+  {
+   "region": "Norfolk",
+   "waste": 0.0016420361247947454,
+   "ratio": 1.5922757036227533
+  },
+  {
+   "region": "Hertfordshire",
+   "waste": 0.0,
+   "ratio": 0.8241359542595079
+  },
+  {
+   "region": "Cornwall",
+   "waste": 0.0,
+   "ratio": 0.8597632557229505
+  },
+  {
+   "region": "Dorset",
+   "waste": 0.0,
+   "ratio": 1.0608573401429522
+  },
+  {
+   "region": "Kent",
+   "waste": 0.0,
+   "ratio": 1.191226790822909
+  }
+ ],
+ "rest_waste_direct": 0.020643302928468554,
+ "rest_value_ratio": 1.1005810381998722,
+ "yks": {
+  "region": "Yorkshire",
+  "county": "YKS",
+  "places": 1786,
+  "places_direct": 1302,
+  "waste_direct": 0.3740399385560676,
+  "waste_broad": 0.5005599104143337,
+  "waste_1086_direct": 0.3141321044546851,
+  "waste_entries": 518,
+  "waste_entries_no_1086_value": 428,
+  "paired_entries": 781,
+  "value1066": 744652.0,
+  "value1086": 260629.0,
+  "value_ratio": 0.3500010743273368,
+  "value_ratio_both_only": 0.3922961370806541
+ },
+ "yks_entries": 1635,
+ "yks_entries_waste": 518,
+ "yks_waste_no_value_1086": 428,
+ "yks_waste_no_value_share": 0.8262548262548263,
+ "yks_pairs_imputed": 225,
+ "yks_pairs_both": 556,
+ "yks_v66_no_v86_not_waste": 85,
+ "yks_rural_value_ratio": 0.32041263564518246,
+ "yks_rural_value1066": 699988.0,
+ "yks_rural_value1086": 224285.0,
+ "york_city_value_ratio": 0.8137202221028121,
+ "text_reading": {
+  "CHS": {
+   "n": 217,
+   "now": 61,
+   "was": 120,
+   "pre": 30,
+   "part": 2,
+   "other": 4,
+   "no_value_1086": 58,
+   "was_share": 0.5529953917050692,
+   "now_share": 0.28110599078341014
+  },
+  "SHR": {
+   "n": 167,
+   "now": 42,
+   "was": 118,
+   "pre": 1,
+   "part": 2,
+   "other": 4,
+   "no_value_1086": 45,
+   "was_share": 0.7065868263473054,
+   "now_share": 0.25149700598802394
+  },
+  "HEF": {
+   "n": 85,
+   "now": 34,
+   "was": 38,
+   "pre": 4,
+   "part": 6,
+   "other": 3,
+   "no_value_1086": 31,
+   "was_share": 0.4470588235294118,
+   "now_share": 0.4
+  },
+  "DBY": {
+   "n": 49,
+   "now": 48,
+   "was": 0,
+   "pre": 0,
+   "part": 0,
+   "other": 1,
+   "no_value_1086": 30,
+   "was_share": 0.0,
+   "now_share": 0.9795918367346939
+  },
+  "NTT": {
+   "n": 61,
+   "now": 60,
+   "was": 0,
+   "pre": 0,
+   "part": 0,
+   "other": 1,
+   "no_value_1086": 41,
+   "was_share": 0.0,
+   "now_share": 0.9836065573770492
+  },
+  "STS": {
+   "n": 56,
+   "now": 50,
+   "was": 0,
+   "pre": 0,
+   "part": 0,
+   "other": 6,
+   "no_value_1086": 47,
+   "was_share": 0.0,
+   "now_share": 0.8928571428571429
+  },
+  "LIN": {
+   "n": 57,
+   "now": 53,
+   "was": 1,
+   "pre": 0,
+   "part": 1,
+   "other": 2,
+   "no_value_1086": 41,
+   "was_share": 0.017543859649122806,
+   "now_share": 0.9298245614035088
+  },
+  "LEC": {
+   "n": 28,
+   "now": 17,
+   "was": 4,
+   "pre": 0,
+   "part": 0,
+   "other": 7,
+   "no_value_1086": 8,
+   "was_share": 0.14285714285714285,
+   "now_share": 0.6071428571428571
+  }
+ },
+ "mid_now_share": 0.9518072289156626,
+ "mid_n": 166,
+ "chs_shr_n": 384,
+ "chs_shr_was_share": 0.7005208333333334,
+ "chs_shr_now_share": 0.2682291666666667,
+ "novalue_text_now_share": 0.7964071856287425,
+ "novalue_text_n": 334,
+ "valued_text_was_share": 0.6138211382113821,
+ "valued_text_n": 492,
+ "yks_hundreds_n": 26,
+ "yks_hundred_top": [
+  {
+   "hundred": "Hunthow",
+   "places": 20,
+   "waste_broad": 0.95,
+   "waste_direct": 0.6111111111111112,
+   "value_ratio": 0.04814814814814815
+  },
+  {
+   "hundred": "Burton",
+   "places": 21,
+   "waste_broad": 0.7619047619047619,
+   "waste_direct": 0.35294117647058826,
+   "value_ratio": 0.01935483870967742
+  },
+  {
+   "hundred": "Agbrigg",
+   "places": 46,
+   "waste_broad": 0.7608695652173914,
+   "waste_direct": 0.5714285714285714,
+   "value_ratio": 0.3663992594878124
+  },
+  {
+   "hundred": "Pickering Lythe",
+   "places": 71,
+   "waste_broad": 0.7605633802816901,
+   "waste_direct": 0.42105263157894735,
+   "value_ratio": 0.07775423728813559
+  },
+  {
+   "hundred": "Skyrack",
+   "places": 77,
+   "waste_broad": 0.7012987012987013,
+   "waste_direct": 0.41304347826086957,
+   "value_ratio": 0.22905027932960895
+  }
+ ],
+ "yks_hundred_bottom": [
+  {
+   "hundred": "Strafforth",
+   "places": 120,
+   "waste_broad": 0.16666666666666666,
+   "waste_direct": 0.14736842105263157,
+   "value_ratio": 0.5990964827363666
+  },
+  {
+   "hundred": "Holderness",
+   "places": 122,
+   "waste_broad": 0.09836065573770492,
+   "waste_direct": 0.1527777777777778,
+   "value_ratio": 0.17277754147171417
+  },
+  {
+   "hundred": "Osgoldcross",
+   "places": 40,
+   "waste_broad": 0.075,
+   "waste_direct": 0.03125,
+   "value_ratio": 0.6052
+  }
+ ],
+ "yks_hundred_low_value": [
+  {
+   "hundred": "Burton",
+   "value_ratio": 0.01935483870967742,
+   "value1066": 11160.0,
+   "value1086": 216.0
+  },
+  {
+   "hundred": "Hunthow",
+   "value_ratio": 0.04814814814814815,
+   "value1066": 14040.0,
+   "value1086": 676.0
+  },
+  {
+   "hundred": "Pickering Lythe",
+   "value_ratio": 0.07775423728813559,
+   "value1066": 37760.0,
+   "value1086": 2936.0
+  }
+ ],
+ "yks_hundred_high_value": [
+  {
+   "hundred": "Scard",
+   "value_ratio": 0.6724137931034483,
+   "value1066": 6960.0,
+   "value1086": 4680.0
+  },
+  {
+   "hundred": "Acklam",
+   "value_ratio": 0.7925925925925926,
+   "value1066": 4320.0,
+   "value1086": 3424.0
+  },
+  {
+   "hundred": "Allerton",
+   "value_ratio": 1.0231788079470199,
+   "value1066": 1208.0,
+   "value1086": 1236.0
+  }
+ ],
+ "yks_hundred_ratio_range": [
+  0.01935483870967742,
+  1.0231788079470199
+ ],
+ "hex_size_km": 8.0,
+ "hex_n": 786,
+ "hex_n5": 694,
+ "hex_over_half": 93,
+ "hex_over_half_yks_chs": 73,
+ "hex_all_waste": 15,
+ "geo_n_direct": 1301,
+ "geo_n_broad": 1785,
+ "geo_bands": {
+  "york": [
+   {
+    "band": "0 to 15",
+    "n": 101,
+    "waste": 0.33663366336633666
+   },
+   {
+    "band": "15 to 30",
+    "n": 266,
+    "waste": 0.31203007518796994
+   },
+   {
+    "band": "30 to 45",
+    "n": 302,
+    "waste": 0.4503311258278146
+   },
+   {
+    "band": "45 to 60",
+    "n": 356,
+    "waste": 0.31179775280898875
+   },
+   {
+    "band": "60 to 80",
+    "n": 251,
+    "waste": 0.44223107569721115
+   },
+   {
+    "band": "80+",
+    "n": 25,
+    "waste": 0.44
+   }
+  ],
+  "elev": [
+   {
+    "band": "under 25",
+    "n": 331,
+    "waste": 0.26586102719033233
+   },
+   {
+    "band": "25 to 50",
+    "n": 308,
+    "waste": 0.38636363636363635
+   },
+   {
+    "band": "50 to 100",
+    "n": 284,
+    "waste": 0.3204225352112676
+   },
+   {
+    "band": "100 to 200",
+    "n": 307,
+    "waste": 0.4755700325732899
+   },
+   {
+    "band": "200+",
+    "n": 71,
+    "waste": 0.5915492957746479
+   }
+  ],
+  "roman": [
+   {
+    "band": "under 2",
+    "n": 397,
+    "waste": 0.3602015113350126
+   },
+   {
+    "band": "2 to 5",
+    "n": 371,
+    "waste": 0.38274932614555257
+   },
+   {
+    "band": "5 to 10",
+    "n": 254,
+    "waste": 0.39763779527559057
+   },
+   {
+    "band": "10+",
+    "n": 279,
+    "waste": 0.35842293906810035
+   }
+  ],
+  "river": [
+   {
+    "band": "under 0.5",
+    "n": 591,
+    "waste": 0.3790186125211506
+   },
+   {
+    "band": "0.5 to 1",
+    "n": 381,
+    "waste": 0.3543307086614173
+   },
+   {
+    "band": "1 to 2",
+    "n": 249,
+    "waste": 0.3534136546184739
+   },
+   {
+    "band": "2+",
+    "n": 80,
+    "waste": 0.4875
+   }
+  ],
+  "york_broad": [
+   {
+    "band": "0 to 15",
+    "n": 112,
+    "waste": 0.42857142857142855
+   },
+   {
+    "band": "15 to 30",
+    "n": 334,
+    "waste": 0.4281437125748503
+   },
+   {
+    "band": "30 to 45",
+    "n": 427,
+    "waste": 0.5925058548009368
+   },
+   {
+    "band": "45 to 60",
+    "n": 486,
+    "waste": 0.4711934156378601
+   },
+   {
+    "band": "60 to 80",
+    "n": 380,
+    "waste": 0.5368421052631579
+   },
+   {
+    "band": "80+",
+    "n": 46,
+    "waste": 0.34782608695652173
+   }
+  ],
+  "elev_broad": [
+   {
+    "band": "under 25",
+    "n": 462,
+    "waste": 0.3593073593073593
+   },
+   {
+    "band": "25 to 50",
+    "n": 395,
+    "waste": 0.5265822784810127
+   },
+   {
+    "band": "50 to 100",
+    "n": 387,
+    "waste": 0.49612403100775193
+   },
+   {
+    "band": "100 to 200",
+    "n": 439,
+    "waste": 0.592255125284738
+   },
+   {
+    "band": "200+",
+    "n": 102,
+    "waste": 0.6568627450980392
+   }
+  ]
+ },
+ "geo_value_york": [
+  {
+   "band": "0 to 15",
+   "ratio": 0.6485016054227614,
+   "n": 59
+  },
+  {
+   "band": "15 to 30",
+   "ratio": 0.35891298888819134,
+   "n": 157
+  },
+  {
+   "band": "30 to 45",
+   "ratio": 0.32232335663036665,
+   "n": 184
+  },
+  {
+   "band": "45 to 60",
+   "ratio": 0.3533694666077369,
+   "n": 206
+  },
+  {
+   "band": "60 to 80",
+   "ratio": 0.2329461325102709,
+   "n": 141
+  },
+  {
+   "band": "80+",
+   "ratio": 0.19255267025967662,
+   "n": 10
+  }
+ ],
+ "geo_medians": {
+  "km_york": {
+   "waste": 43.64,
+   "not": 43.68
+  },
+  "elev_m": {
+   "waste": 70.1,
+   "not": 46.2
+  },
+  "relief_m": {
+   "waste": 43.25,
+   "not": 32.6
+  },
+  "roman_km": {
+   "waste": 3.9370000000000003,
+   "not": 3.977
+  },
+  "river_km": {
+   "waste": 0.5555000000000001,
+   "not": 0.549
+  }
+ },
+ "geo_logit": {
+  "york10": {
+   "or": 0.967730097337449,
+   "lo": 0.8992430581960683,
+   "hi": 1.0414331617654327,
+   "p": 0.3810850660111187
+  },
+  "elev100": {
+   "or": 2.105919929120589,
+   "lo": 1.585196439514611,
+   "hi": 2.7976966370333494,
+   "p": 2.762796355070795e-07
+  },
+  "relief50": {
+   "or": 0.9201263484316852,
+   "lo": 0.7491326749193712,
+   "hi": 1.1301502730065134,
+   "p": 0.42744053898575785
+  },
+  "roman5": {
+   "or": 0.9391502913504075,
+   "lo": 0.8469681352413847,
+   "hi": 1.0413653513566785,
+   "p": 0.23365001676801755
+  },
+  "river_km": {
+   "or": 1.1335484832078182,
+   "lo": 1.0047007271913757,
+   "hi": 1.2789203083138518,
+   "p": 0.041736279531471715
+  }
+ },
+ "geo_logit_n": 1301,
+ "geo_logit_pseudo_r2": 0.03310260294991352,
+ "geo_logit_broad": {
+  "york10": {
+   "or": 0.9969294475040205,
+   "p": 0.9189064523002897
+  },
+  "elev100": {
+   "or": 1.544925781575333,
+   "p": 0.00029766269294167515
+  },
+  "relief50": {
+   "or": 1.0897986208022992,
+   "p": 0.32258939509848183
+  },
+  "roman5": {
+   "or": 0.8443924497434068,
+   "p": 4.462205733149559e-05
+  },
+  "river_km": {
+   "or": 1.1376479748085224,
+   "p": 0.021327585505604395
+  }
+ },
+ "yks_share_places_above150": 0.14681014604150652,
+ "yks_share_waste_above150": 0.24279835390946503,
+ "yks_waste_above150": 0.6178010471204188,
+ "yks_waste_below50": 0.323943661971831,
+ "yks_waste_near_york": 0.33663366336633666,
+ "yks_waste_far_york": 0.4420289855072464,
+ "chs_bands": [
+  {
+   "band": "0 to 10",
+   "n": 37,
+   "waste": 0.40540540540540543
+  },
+  {
+   "band": "10 to 20",
+   "n": 63,
+   "waste": 0.5238095238095238
+  },
+  {
+   "band": "20 to 30",
+   "n": 67,
+   "waste": 0.5671641791044776
+  },
+  {
+   "band": "30+",
+   "n": 90,
+   "waste": 0.7888888888888889
+  }
+ ],
+ "chs_logit": {
+  "chester10": {
+   "or": 1.560863095807165,
+   "p": 0.0003350959090855697
+  },
+  "elev100": {
+   "or": 1.5030592760121066,
+   "p": 0.39588726834306986
+  }
+ },
+ "north_dist_bands": [
+  {
+   "band": "0 to 25",
+   "n": 270,
+   "waste": 0.3148148148148148
+  },
+  {
+   "band": "25 to 50",
+   "n": 526,
+   "waste": 0.3840304182509506
+  },
+  {
+   "band": "50 to 75",
+   "n": 650,
+   "waste": 0.32461538461538464
+  },
+  {
+   "band": "75 to 100",
+   "n": 429,
+   "waste": 0.18414918414918416
+  },
+  {
+   "band": "100 to 125",
+   "n": 587,
+   "waste": 0.18739352640545145
+  },
+  {
+   "band": "125 to 150",
+   "n": 642,
+   "waste": 0.23208722741433022
+  },
+  {
+   "band": "150 to 200",
+   "n": 653,
+   "waste": 0.30321592649310875
+  },
+  {
+   "band": "200+",
+   "n": 74,
+   "waste": 0.3783783783783784
+  }
+ ],
+ "ls_dropped_valued_waste": 309,
+ "ls_n": 1445,
+ "ls_n_waste": 323,
+ "ls_n_not": 1122,
+ "ls": {
+  "in_bua": {
+   "outcome": "in_bua",
+   "label": "Lies in a built-up area today",
+   "kind": "pp",
+   "n": 1445,
+   "n_waste": 323,
+   "est": -0.014164793511806493,
+   "lo": -0.08083283745215687,
+   "hi": 0.05250325042854388,
+   "p": 0.6770963499852883,
+   "raw_waste": 0.47987616099071206,
+   "raw_not": 0.5276292335115864
+  },
+  "l_area": {
+   "outcome": "l_area",
+   "label": "Size of that built-up area",
+   "kind": "pct",
+   "n": 747,
+   "n_waste": 155,
+   "est": 0.6075666087314042,
+   "lo": 0.12908891751935503,
+   "hi": 1.288810350903022,
+   "p": 0.008451415352649701,
+   "raw_waste": 208.20000000000005,
+   "raw_not": 129.0961269752118
+  },
+  "l_par": {
+   "outcome": "l_par",
+   "label": "Parish residents, 2021",
+   "kind": "pct",
+   "n": 1276,
+   "n_waste": 280,
+   "est": 0.05776804204621322,
+   "lo": -0.18259874631084194,
+   "hi": 0.36881761035292615,
+   "p": 0.6693823101478171,
+   "raw_waste": 396.9949621846607,
+   "raw_not": 588.4827949906438
+  },
+  "l_inc": {
+   "outcome": "l_inc",
+   "label": "Household income of the area, 2023",
+   "kind": "pct",
+   "n": 1445,
+   "n_waste": 323,
+   "est": -0.02498051823114522,
+   "lo": -0.04411947438552877,
+   "hi": -0.005458355564165518,
+   "p": 0.012381310849432031,
+   "raw_waste": 50483.0,
+   "raw_not": 52811.000000000044
+  },
+  "lost_beresford": {
+   "outcome": "lost_beresford",
+   "label": "Became a deserted village",
+   "kind": "pp",
+   "n": 1445,
+   "n_waste": 323,
+   "est": 0.042886821166648756,
+   "lo": -0.005562487999458028,
+   "hi": 0.09133613033275553,
+   "p": 0.08275150468531971,
+   "raw_waste": 0.15789473684210525,
+   "raw_not": 0.07308377896613191
+  }
+ },
+ "ls_waste_bua_top": [
+  {
+   "bua22nm": "Leeds",
+   "n": 6,
+   "area": 12001.1
+  },
+  {
+   "bua22nm": "Kingston upon Hull",
+   "n": 2,
+   "area": 6638.9
+  },
+  {
+   "bua22nm": "Bradford",
+   "n": 5,
+   "area": 6372.6
+  },
+  {
+   "bua22nm": "Nottingham",
+   "n": 4,
+   "area": 5997.6
+  },
+  {
+   "bua22nm": "Telford",
+   "n": 1,
+   "area": 5515.0
+  },
+  {
+   "bua22nm": "Middlesbrough",
+   "n": 3,
+   "area": 4393.8
+  }
+ ],
+ "ls_waste_bua_over1000ha": 0.2,
+ "ls_not_bua_over1000ha": 0.16891891891891891,
+ "ls_waste_bua_westriding_share": 0.3096774193548387,
+ "ls_not_bua_westriding_share": 0.19087837837837837,
+ "ls_yks": {
+  "in_bua": {
+   "est": -0.04604867738365177,
+   "lo": -0.12641103047783359,
+   "hi": 0.034313675710530026,
+   "p": 0.2614014178389459,
+   "n": 686,
+   "n_waste": 252
+  },
+  "l_area": {
+   "est": 0.8195011362993208,
+   "lo": 0.17149197669784755,
+   "hi": 1.825955662390669,
+   "p": 0.007709071705385908,
+   "n": 353,
+   "n_waste": 110
+  },
+  "l_par": {
+   "est": -0.015951491542875784,
+   "lo": -0.28330725482762076,
+   "hi": 0.3511389274127261,
+   "p": 0.9208111441219493,
+   "n": 601,
+   "n_waste": 217
+  },
+  "l_inc": {
+   "est": -0.030767172645191132,
+   "lo": -0.05446950612174173,
+   "hi": -0.0064706747118927765,
+   "p": 0.013366068390565315,
+   "n": 686,
+   "n_waste": 252
+  },
+  "lost_beresford": {
+   "est": 0.0524916399623345,
+   "lo": -0.008168433060846796,
+   "hi": 0.1131517129855158,
+   "p": 0.08987888712580298,
+   "n": 686,
+   "n_waste": 252
+  }
+ },
+ "ls_broad": {
+  "in_bua": {
+   "est": -0.02454865023329362,
+   "lo": -0.057763984831991494,
+   "hi": 0.008666684365404256,
+   "p": 0.14745994976252896,
+   "n": 3648
+  },
+  "l_area": {
+   "est": 0.15481998318083479,
+   "lo": -0.020456531291917157,
+   "hi": 0.3614599414487212,
+   "p": 0.08655208429697817,
+   "n": 1768
+  },
+  "l_inc": {
+   "est": 0.0011599314829666696,
+   "lo": -0.008584836659573103,
+   "hi": 0.01100048241122864,
+   "p": 0.8163095020408975,
+   "n": 3648
+  },
+  "lost_beresford": {
+   "est": 0.006605548685093894,
+   "lo": -0.013386237830963592,
+   "hi": 0.02659733520115138,
+   "p": 0.5172451026179541,
+   "n": 3648
+  }
+ },
+ "ls_broad_n": 3648,
+ "lost_yks_waste": 0.15212527964205816,
+ "lost_yks_not": 0.13789237668161436,
+ "lost_yks_waste_n": 136,
+ "lost_yks_not_n": 123,
+ "lost_study_waste_n": 159,
+ "lost_study_waste_share": 0.10185778347213324,
+ "lost_study_not_share": 0.09103641456582633,
+ "lost_study_n_waste_places": 1561,
+ "lost_all_n": 1227,
+ "lost_all_waste_n": 195,
+ "bua_share_waste_yks": 0.4451901565995526,
+ "bua_share_not_yks": 0.49551569506726456,
+ "bua_match_share_all": 0.5096784264751795,
+ "bua_with_pop_share": 0.6468606431852986,
+ "lan_n_places": 162,
+ "lan_n_direct": 17,
+ "lan_waste_broad": 0.3395061728395062,
+ "lan_waste_broad_n": 55,
+ "preston_included": 61,
+ "preston_vills": 62,
+ "preston_located": 55,
+ "preston_is_waste": 1,
+ "lan_entries": 14,
+ "lan_entries_waste": 1,
+ "rm_n_places": 55,
+ "rm_waste_n": 2,
+ "rm_entries": 56,
+ "rm_entries_waste": 3,
+ "rm_entries_v66": 34,
+ "rv_n": 33,
+ "rv_waste_broad_n": 18,
+ "rv_in_bua": 9,
+ "rv_by_hundred": [
+  {
+   "hundred": "Amounderness",
+   "n": 5,
+   "waste": 5
+  },
+  {
+   "hundred": "Blackburn",
+   "n": 2,
+   "waste": 0
+  },
+  {
+   "hundred": "Craven",
+   "n": 26,
+   "waste": 13
+  }
+ ],
+ "rv_names_waste": [
+  "Aighton",
+  "Bolton [by Bowland]",
+  "Chipping",
+  "Dilworth [House]",
+  "Ellenthorpe",
+  "Gisburn",
+  "Holme",
+  "Horton",
+  "Nappa",
+  "Newsholme",
+  "Painley",
+  "Paythorne",
+  "Raygill [Moss]",
+  "Ribchester",
+  "Rimington",
+  "Wheatley",
+  "[Little] Middop",
+  "{Stratesergum}"
+ ],
+ "rv_names_not": [
+  "Bashall [Eaves]",
+  "Battersby [Barn]",
+  "Easington",
+  "Grindleton",
+  "Hammerton [Hall]",
+  "Newton",
+  "Pendleton",
+  "Radholme [Laund]",
+  "Slaidburn",
+  "Waddington",
+  "Whalley",
+  "[Great] Mitton",
+  "[West] Bradford",
+  "{Bogeuurde}",
+  "{Sotleie}"
+ ],
+ "cli_n": 38,
+ "cli_waste_broad_n": 18,
+ "cli_direct_n": 12,
+ "cli_in_bua": 12,
+ "cli_named_in_data": 0,
+ "cli_craven_n": 29,
+ "cli_craven_waste": 13,
+ "cli_amd_n": 5,
+ "cli_amd_waste": 5,
+ "cli_blackburn_n": 4,
+ "cli_blackburn_waste": 0,
+ "craven_n": 123,
+ "craven_waste_broad": 0.35772357723577236,
+ "yks_waste_direct_n": 487,
+ "yks_waste_broad_n": 894,
+ "yks_places_broad": 1786,
+ "chs_waste_direct_n": 157,
+ "study_waste_broad_n": 1561,
+ "all_waste_broad_n": 1923,
+ "map_points": 5850
+}

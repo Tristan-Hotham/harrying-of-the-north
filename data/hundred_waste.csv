@@ -1,0 +1,233 @@
+county,countyName,region,hundred_source,hundred,places,places_direct,waste_direct,waste_broad,paired_entries,value1066,value1086,value_ratio,lat,lng,km_york
+CHS,Cheshire,Cheshire,-,-,1,0,,1.0000,0,0.0000,0.0000,,53.2855,-3.4640,174.9000
+CHS,Cheshire,North-east Wales,Ati's Cross,Ati's Cross,4,4,0.7500,0.7500,2,528.0000,528.0000,,53.1606,-2.9175,150.6100
+CHS,Cheshire,North-east Wales,Bistre,Bistre,6,5,1.0000,1.0000,1,120.0000,0.0000,,53.1587,-3.1331,163.0900
+CHS,Cheshire,Lancashire between Ribble and Mersey,Blackburn,Blackburn,5,4,0.0000,0.0000,0,0.0000,0.0000,,53.7897,-2.4553,88.4600
+CHS,Cheshire,Cheshire,Broxton,Broxton,36,36,0.5833,0.5833,37,14637.0000,12468.0000,0.8518,53.0969,-2.8075,149.4700
+CHS,Cheshire,Cheshire,Bucklow (East),Bucklow (East),24,24,0.9167,0.9167,17,1812.0000,1092.0000,0.6026,53.3433,-2.3720,110.7350
+CHS,Cheshire,Cheshire,Bucklow (West),Bucklow (West),16,16,0.6875,0.6875,15,1608.0000,2132.0000,1.3259,53.3142,-2.6122,125.7600
+CHS,Cheshire,Cheshire,Chester,Chester,6,6,0.3333,0.5000,7,852.0000,598.0000,0.7019,53.1893,-2.8820,147.5200
+CHS,Cheshire,North-east Wales,Deeside,Deeside,13,13,0.0769,0.0769,1,72.0000,120.0000,,53.2121,-3.0825,156.2400
+CHS,Cheshire,Cheshire,Eddisbury (North),Eddisbury (North),17,17,0.5294,0.5294,13,5412.0000,2076.0000,0.3836,53.2574,-2.7161,135.9200
+CHS,Cheshire,Cheshire,Eddisbury (South),Eddisbury (South),21,21,0.6190,0.6190,21,5792.0000,3256.0000,0.5622,53.1616,-2.6642,138.0300
+CHS,Cheshire,Lancashire between Ribble and Mersey,Leyland,Leyland,1,1,1.0000,1.0000,0,0.0000,0.0000,,53.6970,-2.6906,110.1600
+CHS,Cheshire,Cheshire,Macclesfield,Macclesfield,27,27,0.8519,0.8519,17,7128.0000,1764.0000,0.2475,53.3006,-2.1700,106.0700
+CHS,Cheshire,North-east Wales,Maelor Cymraeg,Maelor Cymraeg,7,6,1.0000,1.0000,3,1140.0000,888.0000,,53.0749,-2.9472,158.0400
+CHS,Cheshire,Cheshire,Maelor Saesneg,Maelor Saesneg,3,3,1.0000,1.0000,3,6376.0000,1728.0000,,52.9979,-2.8384,158.6200
+CHS,Cheshire,Cheshire,Nantwich,Nantwich,35,35,0.5429,0.6000,33,11516.0000,4248.0000,0.3689,53.0501,-2.5191,138.7700
+CHS,Cheshire,Lancashire between Ribble and Mersey,Newton,Newton,2,1,0.0000,0.0000,0,0.0000,0.0000,,53.4412,-2.6036,116.2950
+CHS,Cheshire,Cheshire,Northwich,Northwich,34,34,0.7059,0.7353,27,4716.0000,2136.0000,0.4529,53.1853,-2.4179,124.8050
+CHS,Cheshire,North-east Wales,Rhuddlan,Rhuddlan,24,17,1.0000,1.0000,2,2040.0000,1320.0000,,53.2765,-3.3993,172.2750
+CHS,Cheshire,Lancashire between Ribble and Mersey,Salford,Salford,5,4,0.2500,0.2000,0,0.0000,0.0000,,53.5279,-2.2202,93.5400
+CHS,Cheshire,North-east Wales,Tegeingl,Tegeingl,27,27,1.0000,1.0000,0,0.0000,0.0000,,53.2866,-3.3035,165.9600
+CHS,Cheshire,Lancashire between Ribble and Mersey,Warrington,Warrington,1,1,0.0000,0.0000,0,0.0000,0.0000,,53.3918,-2.5954,118.7300
+CHS,Cheshire,Lancashire between Ribble and Mersey,West Derby,West Derby,41,41,0.0000,0.0000,0,0.0000,0.0000,,53.4937,-2.9193,133.4600
+CHS,Cheshire,Cheshire,Wirral,Wirral,38,38,0.2632,0.2632,42,16584.0000,9487.0000,0.5721,53.3008,-3.0108,147.7600
+DBY,Derbyshire,Derbyshire,Appletree,Appletree,66,54,0.0926,0.1970,46,37992.0000,24244.0000,0.6381,52.9460,-1.6359,119.8200
+DBY,Derbyshire,Derbyshire,High Peak,High Peak,67,25,0.3600,0.3134,19,12736.0000,6600.0000,0.5182,53.2738,-1.7298,89.0500
+DBY,Derbyshire,Derbyshire,Morleyston,Morleyston,56,40,0.1750,0.1964,34,36376.0000,26416.0000,0.7262,52.9396,-1.4310,117.9800
+DBY,Derbyshire,Derbyshire,Repton,Repton,30,26,0.1923,0.2000,22,16584.0000,11948.0000,0.7205,52.7923,-1.5432,135.7900
+DBY,Derbyshire,Derbyshire,Scarsdale,Scarsdale,64,48,0.1458,0.1250,45,20716.0000,16374.0000,0.7904,53.2122,-1.3730,86.3550
+DBY,Derbyshire,Derbyshire,Wirksworth,Wirksworth,39,18,0.5000,0.6667,14,16020.0000,12054.0000,0.7524,53.0999,-1.6754,105.0100
+HEF,Herefordshire,Herefordshire,Archenfield,Archenfield,10,9,0.1111,0.1000,1,120.0000,0.0000,,51.9412,-2.6939,248.8950
+HEF,Herefordshire,Herefordshire,Bromsash,Bromsash,16,15,0.2000,0.2500,11,4600.0000,3448.0000,0.7496,51.9110,-2.5493,248.2400
+HEF,Herefordshire,Herefordshire,Castle,Castle,1,1,0.0000,0.0000,0,0.0000,0.0000,,51.8089,-2.7194,264.0100
+HEF,Herefordshire,Herefordshire,Castlery,Castlery,3,3,1.0000,1.0000,1,480.0000,480.0000,,51.8879,-2.9872,255.0700
+HEF,Herefordshire,Herefordshire,Cutsthorn,Cutsthorn,17,17,0.1176,0.1176,22,15516.0000,15216.0000,0.9807,52.0822,-2.7401,238.3600
+HEF,Herefordshire,Herefordshire,Dinedor,Dinedor,9,9,0.3333,0.3333,7,6120.0000,5472.0000,0.8941,52.0316,-2.7424,241.0700
+HEF,Herefordshire,Herefordshire,Doddington,Doddington,1,1,0.0000,0.0000,0,0.0000,0.0000,,52.2237,-2.4918,215.5700
+HEF,Herefordshire,Herefordshire,Doddingtree,Doddingtree,1,1,0.0000,0.0000,1,72.0000,96.0000,,52.1518,-2.4764,222.3800
+HEF,Herefordshire,Herefordshire,Elsdon,Elsdon,22,22,0.7273,0.7273,14,7318.0000,7866.0000,1.0749,52.1694,-2.9983,238.1500
+HEF,Herefordshire,Herefordshire,Ewias,Ewias,1,1,0.0000,0.0000,0,0.0000,0.0000,,51.9599,-2.9838,257.1200
+HEF,Herefordshire,Herefordshire,Golden Valley,Golden Valley,16,15,0.6000,0.5625,7,1872.0000,1872.0000,1.0000,52.0488,-2.9620,248.1300
+HEF,Herefordshire,Herefordshire,Greytree,Greytree,10,10,0.1000,0.1000,11,11220.0000,10380.0000,0.9251,52.0254,-2.5931,237.5600
+HEF,Herefordshire,Herefordshire,Hazeltree,Hazeltree,32,31,0.6774,0.6562,15,8148.0000,11316.0000,1.3888,52.2683,-2.9470,227.7400
+HEF,Herefordshire,Herefordshire,Leintwardine,Leintwardine,11,11,0.6364,0.6364,0,0.0000,0.0000,,52.3357,-2.9040,218.0000
+HEF,Herefordshire,Herefordshire,Lene,Lene,1,1,0.0000,0.0000,1,1440.0000,2880.0000,,52.2216,-2.8578,227.5900
+HEF,Herefordshire,Herefordshire,Leominster,Leominster,26,14,0.0000,0.0385,13,4685.0000,5596.0000,1.1945,52.2277,-2.7199,222.8300
+HEF,Herefordshire,Herefordshire,Plegelgate,Plegelgate,17,17,0.2353,0.2353,24,19576.0000,19236.0000,0.9826,52.1917,-2.5440,220.0300
+HEF,Herefordshire,Herefordshire,Radlow,Radlow,23,23,0.0870,0.0870,25,20112.0000,17460.0000,0.8681,52.0926,-2.5215,229.6700
+HEF,Herefordshire,Herefordshire,Sellack,Sellack,1,1,0.0000,0.0000,0,0.0000,0.0000,,51.9534,-2.6053,246.1300
+HEF,Herefordshire,Herefordshire,Staple,Staple,14,14,0.0000,0.0000,20,8532.0000,10344.0000,1.2124,52.0975,-2.8752,240.4450
+HEF,Herefordshire,Herefordshire,Stretford (North),Stretford (North),9,8,0.0000,0.0000,10,5676.0000,4608.0000,0.8118,52.1688,-2.8356,231.3600
+HEF,Herefordshire,Herefordshire,Stretford (South),Stretford (South),12,11,0.6364,0.5833,6,6000.0000,6000.0000,1.0000,52.0336,-2.8457,245.1600
+HEF,Herefordshire,Herefordshire,Thornlaw,Thornlaw,21,20,0.1500,0.1429,29,19356.0000,16932.0000,0.8748,52.1402,-2.6593,229.4300
+HEF,Herefordshire,Herefordshire,Winstree,Winstree,12,11,0.1818,0.1667,10,11196.0000,10704.0000,0.9561,52.0546,-2.4280,230.0100
+HEF,Herefordshire,Herefordshire,Wolphy,Wolphy,9,9,0.3333,0.3333,14,6924.0000,6024.0000,0.8700,52.2785,-2.7042,217.5700
+HEF,Herefordshire,Herefordshire,Wormelow,Wormelow,3,2,0.0000,0.0000,0,0.0000,0.0000,,51.9737,-2.7366,248.2000
+LEC,Leicestershire,Leicestershire,Framland,Framland,46,42,0.0952,0.1522,58,23840.0000,42096.0000,1.7658,52.7978,-0.8317,130.2700
+LEC,Leicestershire,Leicestershire,Gartree,Gartree,57,53,0.0943,0.1404,74,20942.0000,36184.0000,1.7278,52.5692,-0.9315,157.0400
+LEC,Leicestershire,Leicestershire,Goscote,Goscote,86,72,0.1806,0.4419,69,24552.0000,39468.0000,1.6075,52.7225,-1.1406,139.1150
+LEC,Leicestershire,Leicestershire,Guthlaxton,Guthlaxton,96,95,0.0632,0.0833,133,27520.0000,51392.0000,1.8674,52.5704,-1.2772,155.0550
+LIN,Lincolnshire,Lincolnshire,Aslacoe,Aslacoe,19,19,0.1053,0.1579,44,14868.0000,16624.0000,1.1181,53.3801,-0.5405,74.6300
+LIN,Lincolnshire,Lincolnshire,Aswardhurn,Aswardhurn,22,21,0.0952,0.1364,24,13728.0000,20208.0000,1.4720,52.9762,-0.3828,118.5550
+LIN,Lincolnshire,Lincolnshire,Aveland,Aveland,35,35,0.0000,0.0286,53,40992.0000,34992.0000,0.8536,52.8720,-0.3861,129.8100
+LIN,Lincolnshire,Lincolnshire,Beltisloe,Beltisloe,39,35,0.0857,0.1282,51,34632.0000,32756.0000,0.9458,52.7961,-0.5166,134.7700
+LIN,Lincolnshire,Lincolnshire,Bolingbroke,Bolingbroke,22,22,0.0000,0.0000,6,12000.0000,12960.0000,1.0800,53.1567,0.0474,116.7750
+LIN,Lincolnshire,Lincolnshire,Boothby,Boothby,9,8,0.0000,0.0000,9,42504.0000,19320.0000,0.4545,53.1198,-0.5496,100.4600
+LIN,Lincolnshire,Lincolnshire,Bradley,Bradley,17,15,0.1333,0.1765,22,15524.0000,21576.0000,1.3898,53.5433,-0.1049,78.7700
+LIN,Lincolnshire,Lincolnshire,Calcewath,Calcewath,39,37,0.0270,0.0513,19,14344.0000,15796.0000,1.1012,53.2701,0.1807,113.2800
+LIN,Lincolnshire,Lincolnshire,Candleshoe,Candleshoe,24,20,0.0500,0.0833,9,6456.0000,7256.0000,1.1239,53.1841,0.1859,121.2750
+LIN,Lincolnshire,Lincolnshire,Corringham,Corringham,23,23,0.0000,0.0000,23,19392.0000,29880.0000,1.5408,53.4381,-0.6882,64.1900
+LIN,Lincolnshire,Lincolnshire,Elloe,Elloe,11,10,0.0000,0.0000,6,12032.0000,15240.0000,1.2666,52.7843,-0.0220,148.3500
+LIN,Lincolnshire,Lincolnshire,Epworth,Epworth,17,15,0.2667,0.2941,8,9600.0000,5968.0000,0.6217,53.5621,-0.7834,50.1600
+LIN,Lincolnshire,Lincolnshire,Flaxwell,Flaxwell,15,15,0.0000,0.0000,13,19080.0000,25680.0000,1.3459,53.0483,-0.4058,111.6200
+LIN,Lincolnshire,Lincolnshire,Gartree,Gartree,19,19,0.0000,0.0000,9,6600.0000,12660.0000,1.9182,53.2625,-0.1743,98.0100
+LIN,Lincolnshire,Lincolnshire,Graffoe,Graffoe,16,16,0.0000,0.0000,10,19240.0000,13824.0000,0.7185,53.1665,-0.6402,93.6950
+LIN,Lincolnshire,Lincolnshire,Haverstoe,Haverstoe,21,21,0.0476,0.0952,26,17652.0000,22140.0000,1.2542,53.4780,-0.1284,83.2400
+LIN,Lincolnshire,Lincolnshire,Hill,Hill,18,17,0.0000,0.0000,14,16416.0000,22992.0000,1.4006,53.2332,0.0028,108.2800
+LIN,Lincolnshire,Lincolnshire,Horncastle,Horncastle,26,25,0.0000,0.0385,19,22320.0000,28860.0000,1.2930,53.1783,-0.1409,108.8300
+LIN,Lincolnshire,Lincolnshire,Kirton,Kirton,16,16,0.1250,0.1875,15,13224.0000,21852.0000,1.6525,52.9049,-0.1224,133.8850
+LIN,Lincolnshire,Lincolnshire,Langoe,Langoe,16,13,0.0000,0.0000,19,15776.0000,19392.0000,1.2292,53.1467,-0.4064,101.7450
+LIN,Lincolnshire,Lincolnshire,Lawress,Lawress,28,27,0.1481,0.1786,38,29820.0000,52932.0000,1.7751,53.2854,-0.5079,83.7000
+LIN,Lincolnshire,Lincolnshire,Louthesk,Louthesk,31,31,0.0968,0.1935,33,28440.0000,39200.0000,1.3783,53.3543,-0.0059,98.3100
+LIN,Lincolnshire,Lincolnshire,Loveden,Loveden,20,20,0.0500,0.0500,19,38712.0000,50160.0000,1.2957,53.0149,-0.6547,110.3450
+LIN,Lincolnshire,Lincolnshire,Ludborough,Ludborough,5,5,0.2000,0.2000,9,5760.0000,4236.0000,0.7354,53.4223,-0.0467,90.0300
+LIN,Lincolnshire,Lincolnshire,Manley,Manley,39,37,0.1351,0.2821,42,40400.0000,26728.0000,0.6616,53.5920,-0.6129,51.0400
+LIN,Lincolnshire,Lincolnshire,Ness,Ness,17,17,0.1176,0.1765,23,19320.0000,28548.0000,1.4776,52.6892,-0.3884,149.3500
+LIN,Lincolnshire,Lincolnshire,Threo,Threo,20,20,0.0500,0.1000,14,10224.0000,9072.0000,0.8873,52.9234,-0.5579,120.6800
+LIN,Lincolnshire,Lincolnshire,Walshcroft,Walshcroft,25,24,0.0833,0.1200,46,26740.0000,24032.0000,0.8987,53.4221,-0.3200,79.2000
+LIN,Lincolnshire,Lincolnshire,Well,Well,14,14,0.1429,0.2143,9,17040.0000,17760.0000,1.0423,53.3215,-0.7072,75.4750
+LIN,Lincolnshire,Lincolnshire,Winnibriggs,Winnibriggs,22,22,0.0000,0.0000,20,28288.0000,41472.0000,1.4661,52.8878,-0.6720,122.5200
+LIN,Lincolnshire,Lincolnshire,Wolmersty,Wolmersty,7,7,0.1429,0.1429,2,4320.0000,4800.0000,,52.9941,0.0600,131.4000
+LIN,Lincolnshire,Lincolnshire,Wraggoe,Wraggoe,43,42,0.1429,0.2558,36,22392.0000,24744.0000,1.1050,53.3063,-0.2918,89.3600
+LIN,Lincolnshire,Lincolnshire,Yarborough,Yarborough,49,44,0.0909,0.1429,71,68832.0000,65328.0000,0.9491,53.5827,-0.3539,64.6600
+NTH,Northamptonshire,Northamptonshire,Alboldstow,Alboldstow,15,14,0.0000,0.0000,14,12000.0000,11460.0000,0.9550,52.0731,-1.1722,210.1200
+NTH,Northamptonshire,Northamptonshire,Alwardsley,Alwardsley,2,2,0.0000,0.0000,1,360.0000,720.0000,,52.3343,-1.1869,181.5700
+NTH,Northamptonshire,Northamptonshire,Cleyley,Cleyley,17,17,0.1176,0.1176,23,9984.0000,12492.0000,1.2512,52.1069,-0.9025,206.5500
+NTH,Northamptonshire,Northamptonshire,Collingtree,Collingtree,7,6,0.0000,0.0000,6,10860.0000,7776.0000,0.7160,52.1889,-0.9137,197.5700
+NTH,Northamptonshire,Northamptonshire,Corby,Corby,17,17,0.0000,0.0588,18,12988.0000,15828.0000,1.2187,52.4967,-0.6475,166.3100
+NTH,Northamptonshire,Northamptonshire,Foxley,Foxley,12,12,0.0000,0.0000,17,8748.0000,11988.0000,1.3704,52.1381,-1.0967,203.0550
+NTH,Northamptonshire,Northamptonshire,Gravesend,Gravesend,20,20,0.0500,0.0500,30,12832.0000,16740.0000,1.3046,52.2333,-1.1478,193.6150
+NTH,Northamptonshire,Northamptonshire,Guilsborough,Guilsborough,19,19,0.1579,0.3158,22,3940.0000,7428.0000,1.8853,52.3620,-1.0589,179.0100
+NTH,Northamptonshire,Northamptonshire,Hamfordshoe,Hamfordshoe,8,8,0.0000,0.0000,9,5760.0000,8400.0000,1.4583,52.2866,-0.7480,187.6150
+NTH,Northamptonshire,Northamptonshire,Higham Ferrers,Higham Ferrers,14,14,0.0714,0.1429,11,4476.0000,9252.0000,2.0670,52.2897,-0.6044,189.1700
+NTH,Northamptonshire,Northamptonshire,Huxloe,Huxloe,8,8,0.0000,0.0000,11,14952.0000,17580.0000,1.1758,52.4293,-0.5490,174.8500
+NTH,Northamptonshire,Northamptonshire,Mawsley,Mawsley,8,7,0.0000,0.0000,10,14088.0000,14352.0000,1.0187,52.3474,-0.8655,180.3050
+NTH,Northamptonshire,Northamptonshire,Navisford,Navisford,6,6,0.0000,0.0000,10,3588.0000,7380.0000,2.0569,52.4234,-0.4941,176.0850
+NTH,Northamptonshire,Northamptonshire,Navisland,Navisland,8,8,0.1250,0.1250,20,17640.0000,24300.0000,1.3776,52.3756,-0.6610,178.4350
+NTH,Northamptonshire,Northamptonshire,Nobottle,Nobottle,19,19,0.0526,0.0526,30,7548.0000,15060.0000,1.9952,52.2664,-1.0031,189.1300
+NTH,Northamptonshire,Northamptonshire,Orlingbury,Orlingbury,8,8,0.0000,0.0000,14,3444.0000,5236.0000,1.5203,52.3496,-0.7554,181.5250
+NTH,Northamptonshire,Northamptonshire,Polebrook,Polebrook,10,10,0.0000,0.0000,12,924.0000,10360.0000,11.2121,52.4660,-0.4294,172.1250
+NTH,Northamptonshire,Northamptonshire,Rothwell,Rothwell,15,15,0.1333,0.2000,25,9904.0000,17296.0000,1.7464,52.4232,-0.8216,172.2800
+NTH,Northamptonshire,Northamptonshire,Spelhoe,Spelhoe,8,8,0.0000,0.0000,16,4980.0000,8700.0000,1.7470,52.2757,-0.8875,188.5950
+NTH,Northamptonshire,Northamptonshire,Stoke,Stoke,10,10,0.1000,0.1000,19,3108.0000,5000.0000,1.6088,52.4974,-0.8112,164.1950
+NTH,Northamptonshire,Northamptonshire,Stotfold,Stotfold,10,10,0.1000,0.1000,17,2522.0000,4466.0000,1.7708,52.4341,-0.9659,170.1500
+NTH,Northamptonshire,Northamptonshire,Sutton,Sutton,12,12,0.0833,0.0833,23,12156.0000,17592.0000,1.4472,52.0237,-1.2351,217.5800
+NTH,Northamptonshire,Northamptonshire,Towcester,Towcester,10,10,0.1000,0.1000,10,7200.0000,11280.0000,1.5667,52.1300,-1.0488,201.1200
+NTH,Northamptonshire,Northamptonshire,Upton,Upton,14,14,0.0000,0.0000,17,5832.0000,18120.0000,3.1070,52.6104,-0.3738,156.7800
+NTH,Northamptonshire,Northamptonshire,Warden,Warden,11,10,0.0000,0.0000,14,10704.0000,10980.0000,1.0258,52.1405,-1.2316,202.3000
+NTH,Northamptonshire,Northamptonshire,Willybrook,Willybrook,14,14,0.0000,0.0000,15,20868.0000,25116.0000,1.2036,52.5416,-0.4669,164.1000
+NTH,Northamptonshire,Northamptonshire,Wymersley,Wymersley,14,14,0.0714,0.1429,18,7228.0000,11316.0000,1.5656,52.2089,-0.7930,196.5000
+NTT,Nottinghamshire,Nottinghamshire,Bassetlaw,Bassetlaw,79,72,0.3194,0.3291,53,39896.0000,25400.0000,0.6367,53.2795,-0.9829,78.8500
+NTT,Nottinghamshire,Nottinghamshire,Bingham,Bingham,35,34,0.0294,0.0857,47,39412.0000,40476.0000,1.0270,52.9347,-0.9563,114.2700
+NTT,Nottinghamshire,Nottinghamshire,Broxtow,Broxtow,47,45,0.3556,0.4255,53,21732.0000,20180.0000,0.9286,52.9874,-1.2211,109.1200
+NTT,Nottinghamshire,Nottinghamshire,Lythe,Lythe,23,21,0.1905,0.2609,27,16136.0000,12816.0000,0.7942,53.1517,-0.8510,92.6600
+NTT,Nottinghamshire,Nottinghamshire,Newark,Newark,31,30,0.0667,0.0968,29,28824.0000,19980.0000,0.6932,53.0808,-0.8039,102.5900
+NTT,Nottinghamshire,Nottinghamshire,Oswaldbeck,Oswaldbeck,21,20,0.0500,0.0476,18,7812.0000,6060.0000,0.7757,53.3738,-0.8616,67.7200
+NTT,Nottinghamshire,Nottinghamshire,Rushcliffe,Rushcliffe,23,23,0.0870,0.1739,43,18856.0000,14092.0000,0.7473,52.8822,-1.1482,121.0200
+NTT,Nottinghamshire,Nottinghamshire,Thurgarton,Thurgarton,30,29,0.0690,0.0667,29,28180.0000,25788.0000,0.9151,53.0350,-1.0048,103.7550
+RUT,Rutland,Rutland,Alstoe (Northern Hundred),Alstoe (Northern Hundred),6,5,0.0000,0.0000,5,6720.0000,10800.0000,1.6071,52.7310,-0.6588,140.0050
+RUT,Rutland,Rutland,Alstoe (Southern Hundred),Alstoe (Southern Hundred),6,6,0.0000,0.0000,6,6720.0000,9120.0000,1.3571,52.6969,-0.6894,143.7800
+RUT,Rutland,Rutland,Martinsley,Martinsley,2,2,0.0000,0.0000,2,2160.0000,2640.0000,,52.6405,-0.7379,149.1200
+RUT,Rutland,Rutland,Witchley,Witchley,22,18,0.0000,0.0000,0,0.0000,0.0000,,52.6197,-0.5987,154.1650
+SHR,Shropshire,Shropshire,Alnothstree,Alnothstree,36,35,0.3143,0.3056,37,21505.0000,14700.0000,0.6836,52.5488,-2.4319,184.1600
+SHR,Shropshire,Shropshire,Baschurch,Baschurch,42,42,0.2143,0.2143,48,15384.0000,22876.0000,1.4870,52.7941,-2.8030,173.8800
+SHR,Shropshire,Shropshire,Condertree,Condertree,18,18,0.1667,0.2222,18,10146.0000,8186.0000,0.8068,52.4125,-2.4841,196.6250
+SHR,Shropshire,Shropshire,Condover,Condover,42,41,0.2439,0.2381,45,16222.0000,16726.0000,1.0311,52.6201,-2.7287,184.2700
+SHR,Shropshire,Shropshire,Culvestone,Culvestone,24,24,0.2083,0.2083,24,18700.0000,16488.0000,0.8817,52.4352,-2.7308,202.5550
+SHR,Shropshire,Shropshire,Cuttlestone,Cuttlestone,1,1,0.0000,0.0000,0,0.0000,0.0000,,52.7096,-2.3641,163.7800
+SHR,Shropshire,Shropshire,Hodnet,Hodnet,46,46,0.5217,0.5435,48,15824.0000,13372.0000,0.8450,52.8892,-2.6007,158.7700
+SHR,Shropshire,Shropshire,Leintwardine,Leintwardine,23,23,0.6522,0.6522,23,6408.0000,4464.0000,0.6966,52.4118,-2.9258,216.1100
+SHR,Shropshire,Shropshire,Merset,Merset,17,16,0.7500,0.7647,7,4744.0000,4804.0000,1.0126,52.8244,-3.0014,180.3800
+SHR,Shropshire,Shropshire,Nantwich,Nantwich,1,1,0.0000,0.0000,0,0.0000,0.0000,,52.9337,-2.5296,149.8000
+SHR,Shropshire,Shropshire,Overs,Overs,8,8,0.2500,0.2500,7,4800.0000,2424.0000,0.5050,52.3592,-2.5906,204.5100
+SHR,Shropshire,Shropshire,Patton,Patton,25,25,0.2800,0.2800,26,17976.0000,13696.0000,0.7619,52.5352,-2.6150,191.2300
+SHR,Shropshire,Shropshire,Pirehill,Pirehill,2,2,0.0000,0.0000,1,204.0000,240.0000,,52.8712,-2.4174,150.7200
+SHR,Shropshire,Shropshire,Rhiwset,Rhiwset,27,27,0.1852,0.1852,27,12188.0000,15060.0000,1.2356,52.6943,-2.9163,186.4700
+SHR,Shropshire,Shropshire,Rinlow,Rinlow,17,17,0.2941,0.2941,13,26988.0000,13620.0000,0.5047,52.4489,-2.9323,208.6000
+SHR,Shropshire,Shropshire,Seisdon,Seisdon,8,8,0.1250,0.1250,0,0.0000,0.0000,,52.5131,-2.3237,181.6150
+SHR,Shropshire,Shropshire,Shrewsbury,Shrewsbury,4,4,0.0000,0.0000,5,2256.0000,3778.0000,1.6746,52.7010,-2.7636,180.0100
+SHR,Shropshire,Shropshire,Wittery,Wittery,31,14,0.2857,0.6774,14,3832.0000,2496.0000,0.6514,52.5792,-3.0961,204.5600
+SHR,Shropshire,Shropshire,Wolphy,Wolphy,1,1,0.0000,0.0000,0,0.0000,0.0000,,52.3664,-2.7137,208.7200
+SHR,Shropshire,Shropshire,Wrockwardine,Wrockwardine,54,54,0.3704,0.3704,48,34180.0000,27820.0000,0.8139,52.7463,-2.5435,167.8450
+STS,Staffordshire,Staffordshire,Cuttlestone,Cuttlestone,68,52,0.1346,0.1912,15,5328.0000,4708.0000,0.8836,52.7345,-2.1694,155.4200
+STS,Staffordshire,Staffordshire,Offlow,Offlow,61,41,0.1220,0.1967,22,21004.0000,21964.0000,1.0457,52.6965,-1.8054,149.3200
+STS,Staffordshire,Staffordshire,Pirehill,Pirehill,115,95,0.1789,0.2435,16,9979.0000,9267.0000,0.9287,52.9013,-2.1928,141.0300
+STS,Staffordshire,Staffordshire,Seisdon,Seisdon,37,35,0.1429,0.1622,25,12876.0000,16116.0000,1.2516,52.5567,-2.1914,172.6300
+STS,Staffordshire,Staffordshire,Totmonslow,Totmonslow,42,42,0.4286,0.4286,8,4560.0000,6144.0000,1.3474,53.0087,-1.9337,121.4350
+WAR,Warwickshire,Warwickshire,Barcheston,Barcheston,11,11,0.0000,0.0000,18,11640.0000,19860.0000,1.7062,52.0460,-1.6349,216.1900
+WAR,Warwickshire,Warwickshire,Brinklow,Brinklow,29,29,0.0000,0.0000,33,15660.0000,19128.0000,1.2215,52.4530,-1.3690,169.4300
+WAR,Warwickshire,Warwickshire,Came,Came,8,2,0.0000,0.0000,0,0.0000,0.0000,,52.4180,-1.9518,181.8450
+WAR,Warwickshire,Warwickshire,Chelthorn,Chelthorn,7,7,0.0000,0.0000,1,960.0000,1200.0000,,52.1281,-1.7562,209.2600
+WAR,Warwickshire,Warwickshire,Coleshill,Coleshill,46,46,0.0435,0.0435,53,26068.0000,29408.0000,1.1281,52.5228,-1.6765,164.9800
+WAR,Warwickshire,Warwickshire,Deerhurst,Deerhurst,5,5,0.0000,0.0000,1,720.0000,1200.0000,,52.0569,-1.6559,218.0700
+WAR,Warwickshire,Warwickshire,Ferncombe,Ferncombe,50,50,0.0200,0.0200,53,26976.0000,34320.0000,1.2722,52.2419,-1.7908,197.0950
+WAR,Warwickshire,Warwickshire,Fexhole,Fexhole,5,5,0.0000,0.0000,6,15960.0000,29040.0000,1.8195,52.1088,-1.5648,210.3000
+WAR,Warwickshire,Warwickshire,Fishborough,Fishborough,1,1,0.0000,0.0000,0,0.0000,0.0000,,52.2965,-1.8181,192.0900
+WAR,Warwickshire,Warwickshire,Hunsbury,Hunsbury,10,10,0.0000,0.0000,15,14760.0000,19080.0000,1.2927,52.1521,-1.3963,203.3000
+WAR,Warwickshire,Warwickshire,Kiftsgate,Kiftsgate,1,1,0.0000,0.0000,0,0.0000,0.0000,,52.0986,-1.7459,212.4000
+WAR,Warwickshire,Warwickshire,Marton,Marton,31,31,0.0000,0.0000,62,29676.0000,37584.0000,1.2665,52.3167,-1.3235,184.4400
+WAR,Warwickshire,Warwickshire,Northants,Northants,1,1,0.0000,0.0000,0,0.0000,0.0000,,52.1868,-1.3213,198.4900
+WAR,Warwickshire,Warwickshire,Offlow,Offlow,3,2,0.0000,0.0000,0,0.0000,0.0000,,52.4974,-1.9302,171.0800
+WAR,Warwickshire,Warwickshire,Oswaldslow,Oswaldslow,5,4,0.2500,0.4000,0,0.0000,0.0000,,52.0713,-1.6381,214.4000
+WAR,Warwickshire,Warwickshire,Pathlow,Pathlow,10,10,0.0000,0.0000,11,8580.0000,19680.0000,2.2937,52.2000,-1.7029,200.5300
+WAR,Warwickshire,Warwickshire,Pershore and Westminster,Pershore and Westminster,2,1,0.0000,0.0000,0,0.0000,0.0000,,52.3008,-1.7378,190.5450
+WAR,Warwickshire,Warwickshire,Stoneleigh,Stoneleigh,27,27,0.0741,0.0741,39,21912.0000,27852.0000,1.2711,52.3265,-1.4990,185.1500
+WAR,Warwickshire,Warwickshire,Tewkesbury,Tewkesbury,2,2,0.0000,0.0000,0,0.0000,0.0000,,52.1570,-1.7237,205.7300
+WAR,Warwickshire,Warwickshire,Tremlow,Tremlow,20,20,0.1000,0.1000,29,46560.0000,77640.0000,1.6675,52.1902,-1.5779,200.3400
+WAR,Warwickshire,Warwickshire,Witley,Witley,1,1,0.0000,0.0000,0,0.0000,0.0000,,52.1615,-1.7602,205.7600
+WOR,Worcestershire,Worcestershire,Came,Came,26,10,0.0000,0.0000,12,7176.0000,5652.0000,0.7876,52.3523,-2.0087,190.9200
+WOR,Worcestershire,Worcestershire,Chelthorn,Chelthorn,5,5,0.0000,0.0000,0,0.0000,0.0000,,52.1185,-1.8276,211.0700
+WOR,Worcestershire,Worcestershire,Clent,Clent,27,27,0.0370,0.0741,27,28468.0000,22816.0000,0.8015,52.3555,-2.1273,196.7600
+WOR,Worcestershire,Worcestershire,Cresslau,Cresslau,19,9,0.1111,0.5789,10,14628.0000,14208.0000,0.9713,52.3716,-2.2368,192.5700
+WOR,Worcestershire,Worcestershire,Deerhurst,Deerhurst,1,1,0.0000,0.0000,0,0.0000,0.0000,,52.0359,-2.0816,224.9000
+WOR,Worcestershire,Worcestershire,Doddingtree,Doddingtree,36,34,0.0882,0.1389,40,25200.0000,22956.0000,0.9110,52.3068,-2.4178,204.0450
+WOR,Worcestershire,Worcestershire,Esch,Esch,16,15,0.1333,0.2500,15,14220.0000,11304.0000,0.7949,52.2106,-2.0060,203.9700
+WOR,Worcestershire,Worcestershire,Ferncombe,Ferncombe,1,1,0.0000,0.0000,1,240.0000,120.0000,,52.2876,-1.9061,194.6400
+WOR,Worcestershire,Worcestershire,Fishborough,Fishborough,11,8,0.0000,0.0909,9,14760.0000,13920.0000,0.9431,52.1241,-1.9650,213.6900
+WOR,Worcestershire,Worcestershire,Greston,Greston,2,2,0.0000,0.0000,0,0.0000,0.0000,,52.0449,-1.9139,220.8400
+WOR,Worcestershire,Worcestershire,Oswaldslow,Oswaldslow,60,53,0.0755,0.1000,59,50568.0000,46056.0000,0.9108,52.1471,-2.1481,212.5550
+WOR,Worcestershire,Worcestershire,Pershore and Westminster,Pershore and Westminster,35,29,0.0345,0.0857,19,27496.0000,27016.0000,0.9825,52.1270,-2.1222,216.6700
+WOR,Worcestershire,Worcestershire,Plegelgate,Plegelgate,1,1,0.0000,0.0000,0,0.0000,0.0000,,52.2596,-2.5069,212.4300
+WOR,Worcestershire,Worcestershire,Seisdon,Seisdon,1,1,0.0000,0.0000,0,0.0000,0.0000,,52.4220,-2.3470,191.4200
+WOR,Worcestershire,Worcestershire,Tewkesbury,Tewkesbury,2,2,0.0000,0.0000,0,0.0000,0.0000,,52.0538,-2.1254,224.0500
+WOR,Worcestershire,Worcestershire,Tibblestone,Tibblestone,2,2,0.0000,0.0000,0,0.0000,0.0000,,52.0404,-2.0014,222.8750
+WOR,Worcestershire,Worcestershire,Witley,Witley,1,0,,0.0000,0,0.0000,0.0000,,52.0718,-1.9066,217.8000
+YKS,Yorkshire,Yorkshire,Acklam,Acklam,25,24,0.3333,0.4400,12,4320.0000,3424.0000,0.7926,54.0460,-0.7996,20.8800
+YKS,Yorkshire,Yorkshire,Agbrigg,Agbrigg,46,28,0.5714,0.7609,26,25928.0000,9500.0000,0.3664,53.6411,-1.6502,53.4300
+YKS,Yorkshire,Yorkshire,Ainsty,Ainsty,40,36,0.1944,0.2250,36,15916.0000,7820.0000,0.4913,53.9273,-1.2088,10.9750
+YKS,Yorkshire,Yorkshire,Allerton,Allerton,59,36,0.3056,0.6780,5,1208.0000,1236.0000,1.0232,54.3656,-1.3769,48.2600
+YKS,Yorkshire,Lancashire north of the Ribble,Amounderness,"Amounderness, Lonsdale and Furness",162,17,0.0588,0.3395,0,0.0000,0.0000,,54.0449,-2.8160,114.0550
+YKS,Yorkshire,Yorkshire,Barkston Ash,Barkston Ash,35,28,0.2143,0.1714,23,11048.0000,7020.0000,0.6354,53.8142,-1.2125,20.6200
+YKS,Yorkshire,Yorkshire,{Gerlestre} [Birdforth],Birdforth,47,34,0.3824,0.3830,17,9696.0000,6252.0000,0.6448,54.2100,-1.2885,31.2400
+YKS,Yorkshire,Yorkshire,{Bolesford} [Bulmer],Bulmer,81,71,0.4366,0.5679,31,10416.0000,5920.0000,0.5684,54.0654,-1.0581,14.3200
+YKS,Yorkshire,Yorkshire,Burton,Burton,21,17,0.3529,0.7619,7,11160.0000,216.0000,0.0194,54.0980,-0.3810,47.5400
+YKS,Yorkshire,Yorkshire,Cave,Cave,17,15,0.5333,0.5882,11,13248.0000,4740.0000,0.3578,53.8291,-0.7848,21.2100
+YKS,Yorkshire,Yorkshire,`Burghshire' [Claro],Claro,123,89,0.4494,0.6098,65,30328.0000,10307.0000,0.3399,54.0342,-1.5242,31.0500
+YKS,Yorkshire,Yorkshire,Craven,Craven,123,69,0.1884,0.3577,0,0.0000,0.0000,,53.9865,-2.1415,70.1100
+YKS,Yorkshire,Yorkshire,Driffield,Driffield,16,12,0.4167,0.8125,4,12720.0000,840.0000,,53.9859,-0.4774,39.8850
+YKS,Yorkshire,Yorkshire,Halikeld,Halikeld,28,14,0.4286,0.6786,8,7332.0000,1272.0000,0.1735,54.1410,-1.4554,31.9300
+YKS,Yorkshire,Yorkshire,Hessle,Hessle,20,14,0.2857,0.6000,10,7080.0000,6024.0000,0.8508,53.7723,-0.6786,33.3400
+YKS,Yorkshire,Yorkshire,Holderness,Holderness,122,72,0.1528,0.0984,44,141060.0000,24372.0000,0.1728,53.8118,-0.1646,61.1500
+YKS,Yorkshire,Yorkshire,Howden,Howden,29,13,0.2308,0.7586,8,13584.0000,4596.0000,0.3383,53.7685,-0.8906,27.2900
+YKS,Yorkshire,Yorkshire,Hunthow,Hunthow,20,18,0.6111,0.9500,5,14040.0000,676.0000,0.0481,54.1117,-0.2485,57.5750
+YKS,Yorkshire,Yorkshire,Land of Count Alan,Land of Count Alan (Richmondshire),198,158,0.5823,0.6515,125,46816.0000,16064.0000,0.3431,54.3540,-1.7028,59.4800
+YKS,Yorkshire,Yorkshire,Langbargh,Langbargh,120,91,0.4176,0.6583,43,72100.0000,17970.0000,0.2492,54.4965,-1.0064,62.5500
+YKS,Yorkshire,Yorkshire,Morley,Morley,48,33,0.5758,0.6458,24,9540.0000,2520.0000,0.2642,53.7527,-1.7345,48.5750
+YKS,Yorkshire,Yorkshire,Osgoldcross,Osgoldcross,40,32,0.0312,0.0750,32,30000.0000,18156.0000,0.6052,53.6484,-1.2315,38.4700
+YKS,Yorkshire,Yorkshire,{Dic} [Pickering Lythe],Pickering Lythe,71,38,0.4211,0.7606,12,37760.0000,2936.0000,0.0778,54.2581,-0.6032,45.3400
+YKS,Yorkshire,Yorkshire,Pocklington,Pocklington,25,20,0.2000,0.3200,10,29412.0000,6576.0000,0.2236,53.9176,-0.8750,17.0000
+YKS,Yorkshire,Yorkshire,{Maneshou} [Ryedale],Ryedale,60,56,0.4821,0.5167,23,10360.0000,4544.0000,0.4386,54.2110,-0.9415,29.9550
+YKS,Yorkshire,Yorkshire,{Scard},Scard,18,17,0.4118,0.5556,8,6960.0000,4680.0000,0.6724,54.1115,-0.7174,29.1400
+YKS,Yorkshire,Yorkshire,Scarsdale,Scarsdale,3,3,0.3333,0.3333,0,0.0000,0.0000,,53.3264,-1.5085,77.0800
+YKS,Yorkshire,Yorkshire,Skyrack,Skyrack,77,46,0.4130,0.7013,29,19332.0000,4428.0000,0.2291,53.8587,-1.5736,33.5400
+YKS,Yorkshire,Yorkshire,{Sneculfcros},Sneculfcros,24,23,0.3478,0.4167,22,16296.0000,7584.0000,0.4654,53.9021,-0.5621,39.2200
+YKS,Yorkshire,Yorkshire,Staincross,Staincross,42,36,0.3889,0.3571,26,10308.0000,3280.0000,0.3182,53.5459,-1.5029,53.9300
+YKS,Yorkshire,Yorkshire,Strafforth,Strafforth,120,95,0.1474,0.1667,69,61980.0000,37132.0000,0.5991,53.4954,-1.2596,54.2100
+YKS,Yorkshire,Yorkshire,`Thorshowe',Thorshowe,17,13,0.8462,1.0000,7,6360.0000,0.0000,0.0000,54.1161,-0.5783,36.2400
+YKS,Yorkshire,Yorkshire,{Turbar},Turbar,20,14,0.2857,0.3500,6,6348.0000,1512.0000,0.2382,54.0887,-0.3649,49.8700
+YKS,Yorkshire,Yorkshire,Warter,Warter,17,13,0.3077,0.2353,6,12744.0000,1500.0000,0.1177,53.9540,-0.7953,21.0200
+YKS,Yorkshire,Yorkshire,Weighton,Weighton,15,9,0.2222,0.2667,10,14400.0000,2832.0000,0.1967,53.8707,-0.6697,28.8600
+YKS,Yorkshire,Yorkshire,Welton,Welton,15,11,0.4545,0.5333,7,8700.0000,7200.0000,0.8276,53.7832,-0.5136,42.4900
+YKS,Yorkshire,Yorkshire,York,York,4,4,0.5000,0.5000,10,16152.0000,27500.0000,1.7026,53.9606,-1.0794,1.2050

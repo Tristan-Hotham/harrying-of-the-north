@@ -1,0 +1,31 @@
+measure,band,n,waste
+york,0 to 15,101,0.3366
+york,15 to 30,266,0.3120
+york,30 to 45,302,0.4503
+york,45 to 60,356,0.3118
+york,60 to 80,251,0.4422
+york,80+,25,0.4400
+elev,under 25,331,0.2659
+elev,25 to 50,308,0.3864
+elev,50 to 100,284,0.3204
+elev,100 to 200,307,0.4756
+elev,200+,71,0.5915
+roman,under 2,397,0.3602
+roman,2 to 5,371,0.3827
+roman,5 to 10,254,0.3976
+roman,10+,279,0.3584
+river,under 0.5,591,0.3790
+river,0.5 to 1,381,0.3543
+river,1 to 2,249,0.3534
+river,2+,80,0.4875
+york_broad,0 to 15,112,0.4286
+york_broad,15 to 30,334,0.4281
+york_broad,30 to 45,427,0.5925
+york_broad,45 to 60,486,0.4712
+york_broad,60 to 80,380,0.5368
+york_broad,80+,46,0.3478
+elev_broad,under 25,462,0.3593
+elev_broad,25 to 50,395,0.5266
+elev_broad,50 to 100,387,0.4961
+elev_broad,100 to 200,439,0.5923
+elev_broad,200+,102,0.6569

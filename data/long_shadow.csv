@@ -1,0 +1,6 @@
+outcome,label,kind,n,n_waste,est,lo,hi,p,raw_waste,raw_not
+in_bua,Lies in a built-up area today,pp,1445,323,-0.01416,-0.08083,0.05250,0.67710,0.47988,0.52763
+l_area,Size of that built-up area,pct,747,155,0.60757,0.12909,1.28881,0.00845,208.20000,129.09613
+l_par,"Parish residents, 2021",pct,1276,280,0.05777,-0.18260,0.36882,0.66938,396.99496,588.48279
+l_inc,"Household income of the area, 2023",pct,1445,323,-0.02498,-0.04412,-0.00546,0.01238,50483.00000,52811.00000
+lost_beresford,Became a deserted village,pp,1445,323,0.04289,-0.00556,0.09134,0.08275,0.15789,0.07308
