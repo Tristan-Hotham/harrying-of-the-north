@@ -1,0 +1,522 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>The Harrying of the North</title>
+<meta name="description" content="William the Conqueror's Harrying of the North in Domesday Book: {{all_waste_broad_n|int}} places named in entries called waste, mapped and set against where they are and what they are today.">
+<meta property="og:title" content="The Harrying of the North">
+<meta property="og:description" content="In 1086 Yorkshire's recorded value was {{yks.value_ratio|pct}} of its 1066 value. Waste climbed with the hills, not with the roads to York, and its mark on today's towns is faint.">
+<meta property="og:image" content="https://tristan-hotham.github.io/harrying-of-the-north/header.png">
+<meta property="og:url" content="https://tristan-hotham.github.io/harrying-of-the-north/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,800;9..144,900&family=IBM+Plex+Mono:wght@400;500&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+<style>
+/* Frost and ember. Ember red = waste in 1086 with no value; amber = waste recorded but valued in 1086; slate = no waste. */
+:root{
+  --bg:#EEF1F4; --panel:#E1E6EB; --fg:#1A1F25; --muted:#5B6570; --rule:#CBD3DB; --card:#F8FAFB; --border:#B6C0CA;
+  --hot:#B8321D; --amb:#D9822B; --cold:#4E6E89; --none:#9AA6B2; --ice:#BFD0DE;
+  --h0:#E4E9EE; --h1:#F2D7C4; --h2:#E9A97E; --h3:#D9732F; --h4:#B8321D; --h5:#6E1609;
+  --display:"Fraunces",Georgia,"Times New Roman",serif;
+  --body:"Source Serif 4",Georgia,"Times New Roman",serif;
+  --mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#12161A; --panel:#1A2026; --fg:#E6EBF0; --muted:#9AA5B0; --rule:#2E363E; --card:#1C2329; --border:#3F4953;
+  --hot:#F0644A; --amb:#F0A050; --cold:#86AACA; --none:#5E6873; --ice:#2C3D4C;
+  --h0:#1E252C; --h1:#3B2E28; --h2:#6E4127; --h3:#B4602E; --h4:#F0644A; --h5:#FFB8A3; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#12161A; --panel:#1A2026; --fg:#E6EBF0; --muted:#9AA5B0; --rule:#2E363E; --card:#1C2329; --border:#3F4953;
+  --hot:#F0644A; --amb:#F0A050; --cold:#86AACA; --none:#5E6873; --ice:#2C3D4C;
+  --h0:#1E252C; --h1:#3B2E28; --h2:#6E4127; --h3:#B4602E; --h4:#F0644A; --h5:#FFB8A3; color-scheme:dark}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);font:400 18px/1.62 var(--body);
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));overflow-x:hidden}
+.wrap{max-width:680px;margin:0 auto;padding-block:28px 64px}
+.wrap .bleed{width:min(1080px,calc(100vw - 32px));margin-left:calc((100% - min(1080px,100vw - 32px))/2);margin-right:0}
+a{color:inherit;text-decoration-color:var(--hot);text-underline-offset:3px}
+.kicker{font:500 12px/1 var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--muted);display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.kicker b{background:var(--hot);color:#fff;padding:5px 8px;font-weight:500}
+header.hero{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:12px 24px;align-items:end;border-bottom:6px double var(--fg);padding-bottom:22px;margin-top:18px}
+h1{font:900 clamp(52px,13vw,112px)/.88 var(--display);letter-spacing:-.02em;margin:0;text-wrap:balance;font-variation-settings:"SOFT" 50}
+h1 em{font-style:normal;color:var(--hot)}
+.mark{width:clamp(84px,19vw,160px);height:auto;display:block}
+.dek{grid-column:1/-1;font-size:21px;line-height:1.42;margin:8px 0 0;max-width:46ch}
+.byline{font:400 13px/1.4 var(--mono);color:var(--muted);margin-top:14px}
+h2{font:800 34px/1.04 var(--display);letter-spacing:-.01em;margin:52px 0 10px;text-wrap:balance}
+h2 .n{font:500 13px/1 var(--mono);color:var(--hot);display:block;letter-spacing:.1em;margin-bottom:10px}
+h3{font:600 20px/1.25 var(--display);margin:28px 0 6px}
+p{margin:0 0 16px}
+.lede::first-letter{font:900 72px/.8 var(--display);float:left;margin:6px 10px 0 0;color:var(--hot)}
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;background:var(--rule);border:1px solid var(--rule);margin:26px 0 8px}
+.stats div{background:var(--card);padding:14px 12px}
+.stats b{display:block;font:900 clamp(28px,6vw,40px)/1 var(--display);color:var(--fg)}
+.stats b.h{color:var(--hot)}
+.stats span{font:400 12px/1.35 var(--mono);color:var(--muted);display:block;margin-top:6px}
+@media (max-width:600px){.stats{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.figure{margin:26px 0 30px}
+.fig-h{font:600 19px/1.25 var(--display);margin:0 0 4px}
+.fig-sub{font:400 13px/1.45 var(--mono);color:var(--muted);margin:0 0 12px}
+.src{font:400 12px/1.45 var(--mono);color:var(--muted);margin-top:10px}
+.chart{width:100%;position:relative}
+.chart svg{display:block;width:100%;height:auto;overflow:visible}
+svg text{font-family:var(--mono);fill:var(--fg)}
+.lab{font-size:12px}.lab.m{fill:var(--muted)}.lab.b{font-weight:500}.lab.s{font-size:11px}
+.tip{position:absolute;pointer-events:none;background:var(--fg);color:var(--bg);font:400 12px/1.45 var(--mono);padding:8px 10px;border-radius:3px;max-width:270px;z-index:1000;transform:translate(-50%,calc(-100% - 12px));display:none}
+.tip b{font-weight:500}
+.controls{display:flex;gap:8px 12px;flex-wrap:wrap;align-items:center;margin:0 0 10px}
+.btn{font:500 12px/1 var(--mono);background:var(--card);color:var(--fg);border:1px solid var(--border);border-radius:3px;padding:8px 10px;cursor:pointer;min-height:36px}
+.btn[aria-pressed="true"]{background:var(--fg);color:var(--bg);border-color:var(--fg)}
+.btn:focus-visible,input:focus-visible{outline:2px solid var(--hot);outline-offset:2px}
+.seg{display:inline-flex;border:1px solid var(--border);border-radius:3px;overflow:hidden;max-width:100%;flex-wrap:wrap}
+.seg .btn{border:0;border-radius:0;border-right:1px solid var(--border)}
+.seg .btn:last-child{border-right:0}
+#lmap{height:660px;border:1px solid var(--border);background:var(--panel);border-radius:2px}
+#lmap2{height:460px;border:1px solid var(--border);background:var(--panel);border-radius:2px}
+@media (max-width:600px){#lmap{height:500px}#lmap2{height:400px}}
+.leaflet-container{font:400 12px/1.4 var(--mono);background:var(--panel)}
+.leaflet-popup-content-wrapper,.leaflet-popup-tip{background:var(--card);color:var(--fg);border-radius:3px;box-shadow:0 2px 10px rgba(0,0,0,.25)}
+.leaflet-popup-content{margin:12px 14px;font:400 12.5px/1.45 var(--mono);min-width:220px}
+.leaflet-container a.leaflet-popup-close-button{color:var(--muted)}
+.leaflet-bar a,.leaflet-bar a:hover{background:var(--card);color:var(--fg);border-bottom-color:var(--border)}
+.leaflet-control-attribution{background:color-mix(in srgb,var(--card) 85%,transparent)!important;color:var(--muted)}
+.leaflet-control-attribution a{color:var(--fg)}
+.mapnote{position:absolute;right:10px;top:10px;z-index:500;background:color-mix(in srgb,var(--card) 90%,transparent);border:1px solid var(--border);padding:8px 10px;font:400 12px/1.35 var(--mono);pointer-events:none;max-width:230px}
+.mapnote b{font:900 24px/1 var(--display);color:var(--hot);display:block;margin-bottom:2px}
+.mapwrap{position:relative}
+.pop b.t{font:600 17px/1.2 var(--display);display:block;margin-bottom:2px}
+.pop .c{color:var(--muted);margin-bottom:6px}
+.pop dl{display:grid;grid-template-columns:auto 1fr;gap:1px 10px;margin:4px 0 6px}
+.pop dt{color:var(--muted)}.pop dd{margin:0}
+.legend{display:flex;gap:6px 14px;flex-wrap:wrap;font:400 12px/1.3 var(--mono);color:var(--muted);margin-top:8px}
+.legend i{display:inline-block;width:11px;height:11px;border-radius:50%;margin-right:6px;vertical-align:-1px}
+.legend i.sq{border-radius:1px}
+.pull{font:600 26px/1.25 var(--display);border-left:6px solid var(--hot);padding:4px 0 4px 18px;margin:30px 0}
+.note{background:var(--panel);border:1px solid var(--rule);padding:14px 16px;font-size:16px;margin:22px 0}
+.note h3{margin-top:0}
+blockquote.q{font:italic 400 19px/1.45 var(--body);border-left:4px solid var(--amb);margin:18px 0;padding:2px 0 2px 16px}
+blockquote.q cite{display:block;font:400 12px/1.4 var(--mono);font-style:normal;color:var(--muted);margin-top:6px}
+table.t{width:100%;border-collapse:collapse;font:400 13px/1.35 var(--mono)}
+table.t th{text-align:left;font-weight:500;color:var(--muted);border-bottom:2px solid var(--fg);padding:6px 8px 6px 0}
+table.t td{border-bottom:1px solid var(--rule);padding:7px 8px 7px 0;vertical-align:top}
+table.t td.num,table.t th.num{text-align:right;white-space:nowrap}
+.tablewrap{overflow-x:auto}
+.cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:20px 0}
+@media (max-width:600px){.cards{grid-template-columns:1fr}}
+.card{background:var(--card);border:1px solid var(--border);border-left:4px solid var(--hot);padding:12px 14px;font:400 13px/1.5 var(--mono)}
+.card.a{border-left-color:var(--amb)}
+.card.s{border-left-color:var(--cold)}
+.card b{font:600 19px/1.2 var(--display);display:block;margin-bottom:2px}
+.card .big{font:900 30px/1.05 var(--display);margin:6px 0 2px}
+.card .big span{color:var(--muted);font:400 13px/1 var(--mono)}
+.grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+@media (max-width:760px){.grid3{grid-template-columns:1fr}}
+.cta{display:flex;gap:10px;flex-wrap:wrap;margin:18px 0}
+.cta a{font:500 13px/1 var(--mono);text-decoration:none;border:1px solid var(--fg);padding:11px 14px;border-radius:3px}
+.cta a.p{background:var(--hot);border-color:var(--hot);color:#fff}
+footer{border-top:6px double var(--fg);margin-top:56px;padding-top:16px;font:400 13px/1.55 var(--mono);color:var(--muted)}
+footer p{margin:0 0 10px}
+.theme{position:fixed;right:12px;bottom:12px;z-index:1002}
+@media print{.theme,.controls{display:none}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<div class="kicker"><b>Data study</b><span>History × data</span><span>England, 1066, 1086 and today</span></div>
+<header class="hero">
+  <h1>Laid <em>waste</em></h1>
+  <svg class="mark" viewBox="-100 -100 200 200" aria-hidden="true"><g id="heroMark"></g></svg>
+  <p class="dek">In the winter of 1069 to 1070 William the Conqueror's army laid waste the north of England. Sixteen years later Domesday Book wrote one word against hundreds of places: <i>vastum</i>, waste. I mapped every one, asked where it fell and what it meant, and looked for its scar on the map of today.</p>
+</header>
+<div class="byline">Dr Tristan Hotham, Independent researcher · October 2026 · Data: Hull Domesday Project via realm-domesday, ONS, OS, Itiner-e, Beresford's Lost Villages</div>
+
+<div class="stats">
+  <div><b class="h">{{yks.value_ratio|pct}}</b><span>Yorkshire's recorded value in 1086, as a share of 1066</span></div>
+  <div><b class="h">{{yks.waste_direct|pct}}</b><span>of Yorkshire places with an entry of their own called waste</span></div>
+  <div><b>{{rest_waste_direct|pct1}}</b><span>of places outside the north and the Welsh border</span></div>
+  <div><b>{{geo_logit.elev100.or|f1}}×</b><span>the odds of waste for every 100 m of height in Yorkshire</span></div>
+</div>
+
+<p class="lede">Orderic Vitalis, a monk writing about fifty years after the event, said William had the crops, herds and food of the north burned so that rebels would have nothing to live on, and that more than 100,000 people died of the famine that followed. Historians still argue over how far to believe him. The one record made close to the time is Domesday Book, compiled in 1086. For each holding it gives a value before 1066 and a value in 1086, and against many in the north it writes a single word: waste.</p>
+<p>I took the Hull Domesday Project's coding of the whole survey, {{n_entries|int}} entries, and followed that word. Of the {{n_waste_entries|int}} entries the Hull coders flag as waste, {{share_waste_entries_in_study|pct}} are in six counties: Yorkshire, Cheshire, Derbyshire, Nottinghamshire, Staffordshire and Shropshire. I asked four questions: where the waste was, what the word means, whether it clusters where an army would have marched, and whether the places it touched are smaller or poorer now. This study builds on three earlier ones: <a href="https://tristan-hotham.github.io/norman-castles/">The Conquest in Castles</a>, <a href="https://tristan-hotham.github.io/domesday-destiny/">Is Domesday Destiny?</a> and <a href="https://tristan-hotham.github.io/lost-villages/">The Villages That Vanished</a>.</p>
+
+<h2><span class="n">01 · The map</span>Every place in a waste entry</h2>
+<p>Each dot is a place Domesday names, from the Midlands to the Tees. Ember red means an entry for the place calls it waste and gives it no value in 1086. Amber means the entry uses the word but the place had a value again by 1086, often because the land "was waste" when its new lord received it. A red ring marks a place named only as a member of a larger estate that the entry calls waste, like the {{preston_vills|int}} vills of Preston. Switch the layers to see value in 1086 against 1066, what stands on each spot today, and the hexagon summary.</p>
+<div class="figure bleed">
+  <div class="controls">
+    <div class="seg" role="group" aria-label="Map layer">
+      <button class="btn" data-l="waste" aria-pressed="true">Waste in 1086</button>
+      <button class="btn" data-l="value" aria-pressed="false">Value, 1066 to 1086</button>
+      <button class="btn" data-l="today" aria-pressed="false">Today</button>
+      <button class="btn" data-l="hex" aria-pressed="false">Hexagons</button>
+    </div>
+    <button class="btn" id="goRibble">Zoom to the Ribble valley</button>
+  </div>
+  <div class="mapwrap"><div id="lmap" role="region" aria-label="Map of Domesday places in the north and midlands, coloured by waste"></div><div class="mapnote" id="mapnote"></div></div>
+  <div class="legend" id="legend"></div>
+  <div class="src">Places located at the centre of their 1 km grid square by the Hull Domesday Project. Values in shillings (12 pence). Built-up areas: ONS Built-up Areas 2022. Click the map to let the scroll wheel zoom it.</div>
+</div>
+
+<h2><span class="n">02 · Where</span>A northern word</h2>
+<p>Waste is almost absent from the south and east. Outside the six northern and north midland counties and Herefordshire, only {{rest_waste_direct|pct1}} of places have an entry calling them waste, and the recorded value of those counties rose: in 1086 it stood at {{rest_value_ratio|pct}} of 1066. In Yorkshire, {{yks.waste_direct|pct}} of the {{yks.places_direct|int}} places with an entry of their own are called waste, and {{yks.waste_broad|pct}} of all {{yks_places_broad|int}} Yorkshire places are named in a waste entry once the member vills of great estates are counted. Yorkshire's recorded value fell to {{yks.value_ratio|pct}} of its 1066 level, or {{yks_rural_value_ratio|pct}} leaving out the city of York.</p>
+<div class="figure">
+  <div class="fig-h">Waste and value, by Domesday county</div>
+  <div class="fig-sub">Dark bar: share of places with an entry of their own called waste. Light extension: share named in any waste entry, counting member vills. Label: value in 1086 as a share of 1066. The 16 highest of the Domesday counties with 60 or more places.</div>
+  <div class="chart" id="county"></div>
+  <div class="src">Lancashire appears in Domesday under Yorkshire (north of the Ribble) and Cheshire (between the Ribble and the Mersey); both are split out here. Values for the land between the Ribble and the Mersey are not comparable (section 07).</div>
+</div>
+<p>Cheshire, harried in the same winter, tops the English counties (only its Welsh borderland ranks higher): {{regions.Cheshire.waste_direct|pct}} of its places carry the word. Yet its value fell less than Yorkshire's, to {{regions.Cheshire.value_ratio|pct}}, and only {{regions.Cheshire.waste_1086_direct|pct}} of its places were still waste with no value in 1086. That gap is the first clue that "waste" does not always mean the same thing.</p>
+
+<h2><span class="n">03 · What</span>One word, three meanings</h2>
+<p>For every county except Yorkshire, the source carries the English translation of each entry, so I could read how the word is used. I sorted each waste entry by its wording: land that <em>is</em> waste in 1086, land that <em>was</em> waste (usually "when he acquired it", or "he found it waste") but had recovered, land waste before 1066, and land partly waste.</p>
+<div class="figure">
+  <div class="fig-h">How the text uses "waste", by county</div>
+  <div class="fig-sub">Waste entries with English text in the source, sorted by their wording. Yorkshire's entries have no text in the source.</div>
+  <div class="chart" id="meaning"></div>
+</div>
+<p>The counties fall into two groups. In Derbyshire, Nottinghamshire and Staffordshire, {{mid_now_share|pct}} of the {{mid_n|int}} waste entries say the land is waste now, in 1086. In Cheshire and Shropshire, {{chs_shr_was_share|pct}} of {{chs_shr_n|int}} waste entries look backwards: the land was waste when the Normans took it, around 1070, and had a value again by 1086. Cheshire also has {{text_reading.CHS.pre|int}} entries, most in the Welsh borderland, that call land waste even before 1066.</p>
+<p>Yorkshire has no text in the source, but its figures speak. Of its {{yks_entries_waste|int}} waste entries, {{yks_waste_no_value_share|pct}} give no value at all for 1086. Where I can check the same rule against text elsewhere, waste entries with no 1086 value say the land is waste now in {{novalue_text_now_share|pct}} of {{novalue_text_n|int}} cases. So Yorkshire's waste is overwhelmingly waste in 1086 itself, sixteen years after the harrying.</p>
+<div class="note">
+  <h3>What did the clerks mean?</h3>
+  <p>Historians have long disagreed about what Domesday's waste records. The plain reading is destruction by William's army in 1069 to 1070. Others point to later violence, including Scottish raids into the north in the 1070s; to new Norman lords merging and reshaping estates, so that a holding lost its own value when its people and ploughs were moved to a neighbouring manor; and to the possibility that the word sometimes meant only that the commissioners could put no value on a holding. Paul Dalton questioned whether William had the time, men and weather to turn the north into a desert. For the wider debate see Wightman (1975), Palmer (1998), Dalton (2002) and Thomas (2008), listed below; the overview I relied on is the English Wikipedia article on the Harrying of the North. My data cannot settle which reading is right for any one place. What it can show is where the word falls, and whether that pattern fits a marching army.</p>
+</div>
+
+<h2><span class="n">04 · Wapentakes</span>The worst-hit districts of Yorkshire</h2>
+<p>Yorkshire was divided into wapentakes, the northern word for hundreds. Waste is not spread evenly between them. In {{yks_hundred_top.0.hundred|raw}}, {{yks_hundred_top.0.waste_broad|pct}} of places are named in a waste entry; in {{yks_hundred_top.1.hundred|raw}}, {{yks_hundred_top.1.waste_broad|pct}}; in {{yks_hundred_top.3.hundred|raw}}, {{yks_hundred_top.3.waste_broad|pct}}. Recorded value collapsed hardest in {{yks_hundred_low_value.0.hundred|raw}} (to {{yks_hundred_low_value.0.value_ratio|pct}} of 1066), {{yks_hundred_low_value.1.hundred|raw}} ({{yks_hundred_low_value.1.value_ratio|pct}}) and {{yks_hundred_low_value.2.hundred|raw}} ({{yks_hundred_low_value.2.value_ratio|pct}}).</p>
+<div class="figure">
+  <div class="fig-h">Waste and value by wapentake, Yorkshire</div>
+  <div class="fig-sub">Wapentakes with 15 or more places that have their own entries. Bar: share of places named in a waste entry (dark: own entry). Right: value in 1086 as a share of 1066, where at least 5 entries can be paired.</div>
+  <div class="chart" id="hund"></div>
+</div>
+<div class="figure bleed">
+  <div class="fig-h">The waste, hexagon by hexagon</div>
+  <div class="fig-sub">Share of Domesday places in each hexagon ({{hex_size_km|int}} km centre to corner) named in a waste entry. Hexagons with fewer than 3 places are pale.</div>
+  <div class="chart" id="hexmap"></div>
+  <div class="src">Of {{hex_n5|int}} hexagons in England with five or more places, {{hex_over_half|int}} have waste in at least half; {{hex_over_half_yks_chs|int}} of those are mostly in Yorkshire or Cheshire.</div>
+</div>
+
+<h2><span class="n">05 · The geography of destruction</span>Up the hills, not along the roads</h2>
+<p>If waste were the footprint of an army, you might expect it thickest around York, where William spent Christmas 1069, along the Roman roads his troops would have used, and in the rich river valleys where the food was. I measured, for each of the {{geo_n_direct|int}} Yorkshire places with an entry of its own (leaving out the city of York), its distance from York, its height, the lie of the land around it, and its distance to the nearest Roman road in Itiner-e and the nearest named river.</p>
+<div class="figure bleed">
+  <div class="grid3">
+    <div><div class="fig-h">Distance from York</div><div class="fig-sub">Share waste, km</div><div class="chart" id="gYork"></div></div>
+    <div><div class="fig-h">Height</div><div class="fig-sub">Share waste, metres</div><div class="chart" id="gElev"></div></div>
+    <div><div class="fig-h">Distance to a Roman road</div><div class="fig-sub">Share waste, km</div><div class="chart" id="gRoman"></div></div>
+  </div>
+  <div class="src">Yorkshire places with their own entries. Share with an entry called waste. Numbers under bars: places in the band.</div>
+</div>
+<p>Distance from York makes almost no difference. The median waste place is {{geo_medians.km_york.waste|int}} km from York, and so is the median place without waste ({{geo_medians.km_york.not|int}} km). Nor do Roman roads: waste places sit a median {{geo_medians.roman_km.waste|f1}} km from one, the others {{geo_medians.roman_km.not|f1}} km. What does matter is height. Below 25 m, {{geo_bands.elev.0.waste|pct}} of places are waste; above 200 m, {{geo_bands.elev.4.waste|pct}}. Places above 150 m are {{yks_share_places_above150|pct}} of the total but {{yks_share_waste_above150|pct}} of the waste.</p>
+<div class="figure">
+  <div class="fig-h">What predicts waste in Yorkshire, all at once</div>
+  <div class="fig-sub">Logistic regression, {{geo_logit_n|int}} places. Odds ratio for each step, with 95% confidence interval. Above 1: more waste.</div>
+  <div class="tablewrap"><table class="t" id="logit"></table></div>
+  <div class="src">Pseudo R² {{geo_logit_pseudo_r2|f2}}: the setting explains little of which places were waste.</div>
+</div>
+<p>Taken together, each 100 m of height multiplies the odds of waste by {{geo_logit.elev100.or|f1}}, other things equal, while distance from York and from Roman roads have no clear effect. Places farther from a named river are a little more likely to be waste. The same holds with the broader measure that counts member vills, except that there places nearer a Roman road are somewhat more often waste (odds ratio {{geo_logit_broad.roman5.or|f2}} per 5 km farther away).</p>
+<p>The money tells a slightly different story. Near York, value held up better. Within 15 km of the city, rural places were worth {{geo_value_york.0.ratio|pct}} of their 1066 value in 1086; between 15 and 60 km, about a third; beyond 60 km, {{geo_value_york.4.ratio|pct}} or less. In Cheshire, waste rises steadily away from Chester, from {{chs_bands.0.waste|pct}} within 10 km to {{chs_bands.3.waste|pct}} beyond 30 km.</p>
+<p class="pull">The waste of 1086 is not a trail of burnt villages along the roads to York. It is a map of the hills and the margins.</p>
+<p>That fits more than one story. An army living off the land would strip the valleys, but valleys also recover first, as survivors and new lords put the best land back to work. Upland holdings that were marginal before 1066 might never have been resettled by 1086, or might simply have been folded into the lowland manors that owned them. My data cannot tell burning from neglect; it can say that, by 1086, waste had retreated to the higher, poorer ground.</p>
+
+<h2><span class="n">06 · The long shadow</span>Can you still see the scar?</h2>
+<p>To ask whether waste in 1086 left a mark that lasts, I took the {{ls_n|int}} places in the six northern and north midland counties that have their own entry and a 1066 value, and compared the {{ls_n_waste|int}} that were waste with no value in 1086 against the {{ls_n_not|int}} with no waste at all. Each comparison is made within the same county and among places of similar 1066 value, and also adjusts for that value directly. ({{ls_dropped_valued_waste|int}} places whose waste entries had a 1086 value are left out of both groups.)</p>
+<div class="figure">
+  <div class="fig-h">Waste places today, against similar places with no waste</div>
+  <div class="fig-sub">Difference with 95% confidence interval. Percentages for sizes and income; percentage points for shares.</div>
+  <div class="chart" id="forest"></div>
+  <div class="src">Built-up areas: nearest ONS Built-up Area 2022 within 1 km of its edge (as a circle of equal area). Parish residents: Census 2021. Income: ONS mean total household income, MSOA, year ending March 2023. Deserted villages: Beresford's Lost Villages.</div>
+</div>
+<p>The scar is faint. Waste places are no less likely to lie in a built-up area today (difference {{ls.in_bua.est|pp}} percentage points, from {{ls.in_bua.lo|pp}} to {{ls.in_bua.hi|pp}}), and their parishes are about as populous. Household income in their neighbourhoods is a little lower, by {{ls.l_inc.est|pctabs}} (confidence interval {{ls.l_inc.hi|pctabs}} to {{ls.l_inc.lo|pctabs}}), a small gap that could easily come from something other than 1069. Where waste places are built up, they sit in bigger towns, not smaller ones: their built-up areas are {{ls.l_area.est|pct}} larger. That is mostly the West Riding: {{ls_waste_bua_westriding_share|pct}} of the built-up waste places are in its southern wapentakes, against {{ls_not_bua_westriding_share|pct}} of the others, and the woollen towns of Leeds and Bradford grew over land Domesday called waste.</p>
+<p>Did waste places become deserted villages? In Yorkshire, {{lost_yks_waste|pct}} of places named in a waste entry are in Beresford's gazetteer of lost villages, against {{lost_yks_not|pct}} of the rest. In the like-for-like comparison the gap is {{ls.lost_beresford.est|pp}} percentage points, with a confidence interval that includes zero. In all, {{lost_all_waste_n|int}} places named in waste entries later became deserted villages, {{lost_yks_waste_n|int}} of them in Yorkshire. In that companion study most dated desertions fall after 1348, in the centuries of plague, sheep and parks.</p>
+
+<h2><span class="n">07 · Lancashire</span>The Ribble valley and Amounderness</h2>
+<p>Lancashire did not exist as a county in 1086. North of the Ribble, Amounderness and the lands beyond it to Furness appear at the end of Yorkshire; between the Ribble and the Mersey, the six hundreds of south Lancashire are an appendix to Cheshire. Neither part is described like the rest of England.</p>
+<div class="cards">
+  <div class="card"><b>Preston</b><div class="big">{{preston_vills|int}} <span>vills</span></div>One entry names Preston and {{preston_included|int}} vills of Amounderness, and the whole entry is coded waste.</div>
+  <div class="card a"><b>Blackburn hundred</b><div class="big">3 <span>years</span></div>Settlers were "granted exemption from dues for 3 years. It is therefore not now valued."</div>
+  <div class="card s"><b>Ribble Valley today</b><div class="big">{{rv_waste_broad_n|int}} <span>of {{rv_n|int}}</span></div>Domesday places in the modern district named in a waste entry.</div>
+</div>
+<blockquote class="q">All these vills belong to Preston; and there are three churches. In sixteen of these vills there are but few inhabitants, but how many there are is not known. The rest are waste.<cite>Domesday Book, Amounderness, in John Porter's translation (History of the Fylde of Lancashire, 1876); punctuation simplified</cite></blockquote>
+<p>Amounderness is the most famous waste in the north-west. Domesday names Preston and {{preston_included|int}} vills belonging to it, says sixteen had a few people and the rest were waste, and gives no value at all. The Hull coding marks the whole entry as waste, so on my map all its located vills are ringed, which overstates the waste by those sixteen unnamed inhabited vills. Further north, in Lonsdale, Furness and Cartmel, the entries list only tax assessments: they are not called waste, but they record no people or values either. Of {{lan_n_places|int}} located places north of the Ribble, {{lan_waste_broad|pct}} are named in a waste entry.</p>
+<p>South of the Ribble the picture is different. Of {{rm_entries|int}} entries for the land between the Ribble and the Mersey, only {{rm_entries_waste|int}} use the word: Altcar "was waste", Salford hundred had "12 carucates of waste land", and part of Leyland "is partly waste". But Blackburn hundred tells its own story. Its lords had settled men with 11½ ploughs and given them three years free of dues, "therefore not now valued". That is a landscape being restocked, not one being burned. These entries give values for 1066 holding by holding, but for 1086 mostly one sum for each hundred, so I do not compare values here.</p>
+<div class="figure bleed">
+  <div class="fig-h">Domesday places around the Ribble valley</div>
+  <div class="fig-sub">Red: named in a waste entry. Blue: not. Filled: the place has its own entry; open: named as a member of a larger estate. Dashed circle: 15 km from Clitheroe.</div>
+  <div class="mapwrap"><div id="lmap2" role="region" aria-label="Map of Domesday places around the Ribble valley"></div></div>
+</div>
+<p>Clitheroe itself is not named in Domesday Book. Within 15 km of the town, the survey names {{cli_n|int}} places, {{cli_waste_broad_n|int}} of them in waste entries: {{cli_craven_waste|int}} of the {{cli_craven_n|int}} in Craven, then part of Yorkshire, and all {{cli_amd_n|int}} in Amounderness. None of the {{cli_blackburn_n|int}} places of Blackburn hundred, Whalley and Pendleton among them, was called waste. Bolton by Bowland, Rimington, Nappa and Horton were waste; Grindleton, Slaidburn, Waddington and Mitton were not. Craven as a whole has {{craven_waste_broad|pct}} of its {{craven_n|int}} places in waste entries. Today {{cli_in_bua|int}} of the {{cli_n|int}} lie in a built-up area, from Longridge and Whalley to Barnoldswick; the rest are farms and hamlets, as most of them have probably always been.</p>
+
+<div class="note" id="method">
+  <h3>How I did this</h3>
+  <p><b>Domesday.</b> Entries and places come from the Hull Domesday Project's coded Domesday via the realm-domesday repository. I used the {{n_entries|int}} entries of the manor and urban kinds, leaving out Yorkshire's summary and claims sections, which repeat holdings. "Waste" is the Hull flag on an entry. A place is "waste (own entry)" if an entry that describes it is flagged, and "named in a waste entry" if it is also listed as a member vill of a flagged entry. The castles study counted Yorkshire's summary entries as well, which is why it gave a lower Yorkshire share.</p>
+  <p><b>Values.</b> Values are in pence. An entry with a 1066 value is paired with its 1086 value; a waste entry with no 1086 value counts as worth nothing in 1086 ({{yks_pairs_imputed|int}} Yorkshire entries); other entries without a 1086 value are left out ({{yks_v66_no_v86_not_waste|int}} in Yorkshire). Counting only entries with both values, Yorkshire stood at {{yks.value_ratio_both_only|pct}} of 1066. An entry's value is shared equally among the places it describes.</p>
+  <p><b>Text.</b> For counties with text I sorted waste entries by their wording with simple patterns ("is waste", "was waste", "found it waste", "waste before 1066", "partly waste"). A few entries fit none and are counted as other.</p>
+  <p><b>Setting.</b> Height, relief (the range of height within 1 km), distance to the nearest named river (OS Open Rivers) and to the nearest Roman road (Itiner-e, with a datum correction) come from the companion study of lost villages, which computed them for every located Domesday place. Distance from York is to the Domesday place of York.</p>
+  <p><b>Today.</b> Each place is matched to the nearest ONS Built-up Area 2022 whose edge, drawn as a circle of the same area round its centre, is within 1 km. Built-up area populations, from summing Census 2021 LSOA counts by the ONS best-fit lookup, exist only for larger areas, so I use area as the size. Income is the ONS estimate for the MSOA containing the place's LSOA. Parish residents come from the companion Domesday Destiny study. The long-shadow comparisons are linear regressions with county-by-1066-value-tercile fixed effects plus log 1066 value, with robust standard errors.</p>
+  <p><b>Known problems.</b> The Hull flag cannot tell "waste now" from "was waste" in Yorkshire; I use the missing 1086 value as a stand-in. Member-vill lists inflate waste where only part of an estate was waste, as at Preston. Places are located to 1 km. Today's measures describe neighbourhoods, not the medieval vill, and nine centuries of other history lie between. None of this proves cause: it describes patterns.</p>
+</div>
+<h3>Sources</h3>
+<ul style="font-size:15px">
+  <li>Hull Domesday Project, Professor J.J.N. Palmer, George Slater and the University of Hull (CC BY-NC-SA), via <a href="https://github.com/embabel-worlds/realm-domesday">realm-domesday</a>. Translation in the source: Phillimore edition.</li>
+  <li>Beresford's Lost Villages, University of Hull (CC BY-NC-SA 4.0), via <a href="https://tristan-hotham.github.io/lost-villages/">The Villages That Vanished</a>.</li>
+  <li>ONS Built-up Areas 2022, LSOA to BUA lookup, Census 2021 (TS001) and small-area income estimates FYE 2023: Office for National Statistics, Open Government Licence v3.0.</li>
+  <li>OS Open Rivers and OS Open Names: contains OS data © Crown copyright and database right 2026 (OGL v3).</li>
+  <li>Itiner-e Roman roads: de Soto, Pažout, Brughmans and others (2025), CC BY 4.0. Elevation: AWS Terrain Tiles (Mapzen/Tilezen).</li>
+  <li>J. Porter (1876) History of the Fylde of Lancashire, Project Gutenberg eBook 65919.</li>
+  <li>Dalton, P. (2002) Conquest, Anarchy and Lordship: Yorkshire, 1066 to 1154. Cambridge University Press.</li>
+  <li>Palmer, J. (1998) War and Domesday waste. In M. Strickland (ed.) Armies, Chivalry and Warfare in Medieval Britain and France.</li>
+  <li>Thomas, H. M. (2008) The Norman Conquest: England after William the Conqueror. Rowman and Littlefield.</li>
+  <li>Wightman, W. E. (1975) The significance of "waste" in the Yorkshire Domesday. Northern History.</li>
+  <li>Wikipedia contributors, <a href="https://en.wikipedia.org/wiki/Harrying_of_the_North">Harrying of the North</a> (accessed October 2026), for Orderic Vitalis and the outline of the debate.</li>
+</ul>
+<div class="cta">
+  <a class="p" href="https://github.com/Tristan-Hotham/harrying-of-the-north">Data and code</a>
+  <a href="https://doi.org/10.5281/zenodo.23689581">Paper (Zenodo)</a>
+  <a href="https://tristan-hotham.github.io/norman-castles/">The Conquest in Castles</a>
+  <a href="https://tristan-hotham.github.io/domesday-destiny/">Is Domesday destiny?</a>
+  <a href="https://tristan-hotham.github.io/lost-villages/">Lost villages</a>
+  <a href="https://blog.tristanhotham.com/">Blog</a>
+</div>
+<footer>
+  <p>Dr Tristan Hotham, Independent researcher. ORCID 0000-0003-4931-9349. Cite as: Hotham, T. (2026) Laid waste: the Harrying of the North in Domesday Book and today. https://doi.org/10.5281/zenodo.23689581</p>
+  <p>I wrote the text, with drafting and editing assistance from Claude (Anthropic), which also helped prepare the analysis code. I reviewed and checked all text and results.</p>
+  <p>Domesday data: Hull Domesday Project, Professor J.J.N. Palmer, George Slater and the University of Hull (CC BY-NC-SA), via the realm-domesday repository (embabel-worlds). Lost villages: Beresford's Lost Villages, University of Hull (CC BY-NC-SA 4.0). ONS data licensed under the Open Government Licence v3.0; contains OS data © Crown copyright and database right 2026. Itiner-e (CC BY 4.0). Elevation: AWS Terrain Tiles. Base map tiles © Esri, HERE, Garmin, © OpenStreetMap contributors, and the GIS user community.</p>
+  <p>Because the Domesday and lost-village data are CC BY-NC-SA, the derived data and the text of this page are released under CC BY-NC-SA 4.0. The code is released under the MIT licence. More history data studies on <a href="https://blog.tristanhotham.com/">the blog</a>.</p>
+</footer>
+</div>
+<div class="tip" id="tip"></div>
+<button class="btn theme" id="theme" aria-label="Toggle dark mode">◐</button>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<script>
+const D = /*SITE*/;
+const R = /*RESULTS*/;
+const NS = "http://www.w3.org/2000/svg";
+const css = v => getComputedStyle(document.documentElement).getPropertyValue(v).trim();
+const el = (t, a = {}, p) => { const e = document.createElementNS(NS, t); for (const k in a) e.setAttribute(k, a[k]); if (p) p.appendChild(e); return e; };
+const fmt = n => n == null ? "n/a" : Math.round(n).toLocaleString("en-GB");
+const pc = (x, d = 0) => x == null ? "n/a" : (x * 100).toFixed(d) + "%";
+const esc = s => String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+const tip = document.getElementById("tip");
+function showTip(h, x, y) { tip.innerHTML = h; tip.style.display = "block"; const w = tip.offsetWidth; x = Math.max(w / 2 + 8, Math.min(innerWidth - w / 2 - 8, x)); tip.style.left = x + scrollX + "px"; tip.style.top = y + scrollY + "px"; }
+function hideTip() { tip.style.display = "none"; }
+function hover(node, h) { node.style.cursor = "pointer"; node.setAttribute("tabindex", "0"); const s = () => { const r = node.getBoundingClientRect(); showTip(h, r.left + r.width / 2, r.top); }; node.addEventListener("pointerenter", s); node.addEventListener("pointerleave", hideTip); node.addEventListener("focus", s); node.addEventListener("blur", hideTip); node.addEventListener("click", e => { s(); e.stopPropagation(); }); }
+document.addEventListener("click", hideTip);
+const redraws = [];
+function resp(box, render) { let last = 0; const go = (force) => { const w = Math.max(260, Math.round(box.clientWidth)); if (!force && Math.abs(w - last) < 4) return; last = w; box.innerHTML = ""; render(w, w < 560); }; new ResizeObserver(() => go()).observe(box); go(); redraws.push(() => go(true)); return go; }
+const lbl = (svg, x, y, s, cls = "lab", anchor = "start") => { const t = el("text", { x, y, class: cls, "text-anchor": anchor }, svg); t.textContent = s; return t; };
+const isDark = () => { const r = document.documentElement; return r.dataset.theme ? r.dataset.theme === "dark" : matchMedia("(prefers-color-scheme: dark)").matches; };
+document.getElementById("theme").onclick = () => { const r = document.documentElement; r.dataset.theme = isDark() ? "light" : "dark"; redraws.forEach(f => f()); };
+const shil = p => p == null ? "n/a" : (p / 12 >= 20 ? "£" + (p / 240).toFixed(p % 240 ? 1 : 0) : Math.round(p / 12) + "s");
+
+/* hero mark: a field of frost-grey dots, some burning */
+(() => { const g = document.getElementById("heroMark"); let s = 7;
+  const rnd = () => (s = (s * 9301 + 49297) % 233280) / 233280;
+  for (let i = 0; i < 46; i++) { const a = rnd() * Math.PI * 2, r = Math.sqrt(rnd()) * 88, x = Math.cos(a) * r, y = Math.sin(a) * r;
+    const hot = (y < 20 && x > -40 && rnd() < .62) || rnd() < .12;
+    el("circle", { cx: x.toFixed(1), cy: y.toFixed(1), r: hot ? 7 : 5, fill: hot ? "var(--hot)" : "var(--none)", opacity: hot ? .95 : .6 }, g); }
+  el("circle", { cx: 0, cy: 0, r: 94, fill: "none", stroke: "var(--fg)", "stroke-width": 2, "stroke-dasharray": "2 6", opacity: .5 }, g);
+})();
+
+/* ===== main map ===== */
+const P = D.p.map(a => ({ lat: a[0], lng: a[1], name: a[2], reg: D.regions[a[3]], st: a[4], v66: a[5], v86: a[6], area: a[7], bua: a[8], lost: a[9], od: a[10], hun: a[11], elev: a[12], inc: a[13] }));
+const STT = ["No waste recorded", "Member of an estate called waste", "Waste recorded, but valued in 1086", "Waste in 1086, no value"];
+let layer = "waste", lmap, tiles, grp;
+function popP(p) {
+  let h = `<div class="pop"><b class="t">${esc(p.name)}</b><div class="c">${esc(p.hun)}${p.hun ? " · " : ""}${esc(p.reg)}</div><dl>`;
+  h += `<dt>1086</dt><dd>${STT[p.st]}</dd>`;
+  if (p.v66 != null) h += `<dt>Value</dt><dd>${shil(p.v66)} in 1066, ${p.v86 ? shil(p.v86) : "nothing"} in 1086</dd>`;
+  h += `<dt>Height</dt><dd>${p.elev != null ? fmt(p.elev) + " m" : "n/a"}</dd>`;
+  h += `<dt>Today</dt><dd>${p.bua ? esc(p.bua) + " (" + fmt(p.area) + " ha built up)" : "not in a built-up area"}</dd>`;
+  if (p.inc) h += `<dt>Income</dt><dd>£${fmt(p.inc)} per household (area)</dd>`;
+  if (p.lost) h += `<dt>Lost</dt><dd>a deserted village (Beresford)</dd>`;
+  h += `</dl>`;
+  return h + (p.od ? `<a href="https://opendomesday.org/place/${p.od}/" target="_blank" rel="noopener">Open Domesday</a>` : "") + `</div>`;
+}
+function ratioCol(r) { if (r == null) return null; return r < 0.25 ? css("--h5") : r < 0.6 ? css("--hot") : r < 0.9 ? css("--amb") : r <= 1.1 ? css("--none") : css("--cold"); }
+function hexCol(f) { const n = f.properties.n; if (n < 3) return css("--h0"); const s = f.properties.waste_broad / n; return s === 0 ? css("--h0") : s < .2 ? css("--h1") : s < .4 ? css("--h2") : s < .6 ? css("--h3") : s < .8 ? css("--h4") : css("--h5"); }
+function rad(z, k) { return Math.max(1.8, Math.min(9, (k || 3) * Math.pow(1.28, z - 7))); }
+function tileUrl() { return `https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_${isDark() ? "Dark" : "Light"}_Gray_Base/MapServer/tile/{z}/{y}/{x}`; }
+function draw() {
+  if (!lmap) return; if (grp) lmap.removeLayer(grp); grp = L.layerGroup();
+  const z = lmap.getZoom(), rend = L.canvas({ padding: 0.5, tolerance: 4 }), bg = css("--bg"), hot = css("--hot"), amb = css("--amb"), none = css("--none"), cold = css("--cold");
+  let note = "", leg = "";
+  if (layer === "hex") {
+    L.geoJSON({ type: "FeatureCollection", features: D.hex }, { style: f => ({ fillColor: hexCol(f), fillOpacity: .85, color: bg, weight: .6 }),
+      onEachFeature: (f, l) => l.bindTooltip(`${f.properties.waste_broad} of ${f.properties.n} places in waste entries${f.properties.ratio != null ? `<br>value 1086: ${pc(f.properties.ratio)} of 1066` : ""}`, { sticky: true }) }).addTo(grp);
+    note = `<b>${R.hex_over_half}</b>hexagons with waste in half their places or more`;
+    leg = ["--h0|none or under 3 places", "--h1|under 20%", "--h2|20 to 40%", "--h3|40 to 60%", "--h4|60 to 80%", "--h5|80% or more"].map(s => { const [c, t] = s.split("|"); return `<span><i class="sq" style="background:var(${c})"></i>${t}</span>`; }).join("");
+  } else {
+    const order = layer === "waste" ? [0, 1, 2, 3] : [0];
+    const pts = layer === "waste" ? [...P].sort((a, b) => a.st - b.st) : layer === "today" ? [...P].sort((a, b) => (b.area || 0) - (a.area || 0)) : P;
+    let n = 0;
+    pts.forEach(p => {
+      let o;
+      if (layer === "waste") {
+        if (p.st === 3) { o = { radius: rad(z, 3.6), weight: .8, color: bg, fillColor: hot, fillOpacity: .95 }; n++; }
+        else if (p.st === 2) o = { radius: rad(z, 3.3), weight: .8, color: bg, fillColor: amb, fillOpacity: .9 };
+        else if (p.st === 1) o = { radius: rad(z, 3), weight: 1.6, color: hot, fillColor: bg, fillOpacity: .5 };
+        else o = { radius: rad(z, 2.4), weight: 0, fillColor: none, fillOpacity: .55 };
+      } else if (layer === "value") {
+        const r = p.v66 ? p.v86 / p.v66 : null, c = ratioCol(r);
+        o = c ? { radius: rad(z, 3.2), weight: .6, color: bg, fillColor: c, fillOpacity: .9 } : { radius: rad(z, 1.6), weight: 0, fillColor: none, fillOpacity: .35 };
+        if (r != null && r < .25) n++;
+      } else {
+        if (p.area) o = { radius: Math.max(2, Math.min(18, Math.sqrt(p.area) / 4)) * Math.pow(1.15, z - 7), weight: .8, color: bg, fillColor: p.st === 3 ? hot : cold, fillOpacity: .6 };
+        else o = { radius: rad(z, 2.2), weight: 1, color: p.lost ? css("--fg") : none, fillColor: bg, fillOpacity: .2 };
+        if (p.area) n++;
+      }
+      L.circleMarker([p.lat, p.lng], Object.assign({ renderer: rend }, o)).bindPopup(() => popP(p), { maxWidth: 310 }).addTo(grp);
+    });
+    if (layer === "waste") { note = `<b>${fmt(n)}</b>places waste in 1086 with no value, on this map`;
+      leg = `<span><i style="background:var(--hot)"></i>Waste in 1086, no value</span><span><i style="background:var(--amb)"></i>Waste recorded, valued in 1086</span><span><i style="background:var(--bg);border:2px solid var(--hot)"></i>Member of an estate called waste</span><span><i style="background:var(--none)"></i>No waste</span>`; }
+    else if (layer === "value") { note = `<b>${fmt(n)}</b>places worth under a quarter of their 1066 value in 1086`;
+      leg = [["--h5", "under 25%"], ["--hot", "25 to 60%"], ["--amb", "60 to 90%"], ["--none", "90 to 110%"], ["--cold", "over 110%"]].map(([c, t]) => `<span><i style="background:var(${c})"></i>${t}</span>`).join("") + `<span>value 1086 as share of 1066</span>`; }
+    else { note = `<b>${fmt(n)}</b>places now in a built-up area (circle size: area)`;
+      leg = `<span><i style="background:var(--hot);opacity:.7"></i>Built up today, waste in 1086</span><span><i style="background:var(--cold);opacity:.7"></i>Built up today, other</span><span><i style="background:var(--bg);border:1px solid var(--none)"></i>Not built up</span><span><i style="background:var(--bg);border:1px solid var(--fg)"></i>Deserted village</span>`; }
+  }
+  L.circleMarker(D.york, { radius: 7, weight: 2, color: css("--fg"), fillColor: bg, fillOpacity: 1 }).bindTooltip("York").addTo(grp);
+  grp.addTo(lmap);
+  document.getElementById("mapnote").innerHTML = note;
+  document.getElementById("legend").innerHTML = leg;
+}
+(() => {
+  if (!window.L) { document.getElementById("lmap").innerHTML = '<p style="padding:16px">The map library did not load.</p>'; return; }
+  lmap = L.map("lmap", { preferCanvas: true, zoomSnap: 0.5, minZoom: 5, maxZoom: 14, scrollWheelZoom: false });
+  lmap.fitBounds([[52.3, -3.4], [54.65, 0.2]], { padding: [0, 0] });
+  tiles = L.tileLayer(tileUrl(), { attribution: 'Tiles &copy; Esri, HERE, Garmin, &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, and the GIS user community', maxZoom: 16 }).addTo(lmap);
+  lmap.on("zoomend", draw);
+  lmap.on("click focus", () => lmap.scrollWheelZoom.enable());
+  lmap.getContainer().addEventListener("mouseleave", () => lmap.scrollWheelZoom.disable());
+  document.querySelectorAll("[data-l]").forEach(b => b.onclick = () => { layer = b.dataset.l; document.querySelectorAll("[data-l]").forEach(x => x.setAttribute("aria-pressed", x === b)); draw(); });
+  document.getElementById("goRibble").onclick = () => lmap.setView([53.87, -2.45], 10);
+  draw();
+  redraws.push(() => { tiles.setUrl(tileUrl()); draw(); });
+  matchMedia("(prefers-color-scheme: dark)").addEventListener("change", () => redraws.forEach(f => f()));
+})();
+
+/* ===== county bars ===== */
+resp(document.getElementById("county"), (W, nar) => {
+  const rows = D.county.slice(0, 16), rowH = 26, m = { l: nar ? 128 : 230, r: nar ? 44 : 120, t: 4, b: 6 }, H = rows.length * rowH + m.t + m.b;
+  const svg = el("svg", { viewBox: `0 0 ${W} ${H}`, role: "img", "aria-label": "Share of places with waste by Domesday county" }, document.getElementById("county"));
+  const X = v => m.l + v / 0.85 * (W - m.l - m.r);
+  const short = s => nar ? s.replace("Lancashire north of the Ribble", "Lancs N of Ribble").replace("Lancashire between Ribble and Mersey", "Lancs Ribble to Mersey").replace("North-east Wales", "NE Wales").replace("Northamptonshire", "Northants").replace("Nottinghamshire", "Notts").replace("Buckinghamshire", "Bucks").replace("Gloucestershire", "Glos").replace("Leicestershire", "Leics").replace("Worcestershire", "Worcs").replace("Staffordshire", "Staffs").replace("Herefordshire", "Herefs").replace("Cambridgeshire", "Cambs").replace("Bedfordshire", "Beds").replace("Hertfordshire", "Herts").replace("Huntingdonshire", "Hunts").replace("Warwickshire", "Warks").replace("Oxfordshire", "Oxon").replace("Lincolnshire", "Lincs").replace("Shropshire", "Shrops").replace("Derbyshire", "Derbys") : s;
+  rows.forEach((r, i) => { const y = m.t + i * rowH, hi = ["Yorkshire", "Cheshire", "North-east Wales", "Lancashire north of the Ribble"].includes(r[0]);
+    lbl(svg, m.l - 8, y + 15, short(r[0]), "lab" + (hi ? " b" : ""), "end");
+    el("rect", { x: m.l, y: y + 4, width: Math.max(1, X(r[3]) - m.l), height: 16, fill: hi ? "var(--hot)" : "var(--h2)", opacity: .35 }, svg);
+    const b = el("rect", { x: m.l, y: y + 4, width: Math.max(1, X(r[2]) - m.l), height: 16, fill: hi ? "var(--hot)" : "var(--h2)" }, svg);
+    hover(b, `<b>${esc(r[0])}</b><br>${fmt(r[1])} places with their own entries<br>own entry waste: ${pc(r[2], 1)}<br>named in any waste entry: ${pc(r[3], 1)}${r[4] != null ? `<br>value 1086: ${pc(r[4])} of 1066` : ""}`);
+    lbl(svg, X(Math.max(r[2], r[3])) + 6, y + 16, pc(r[2]) + (nar || r[4] == null ? "" : `  · value ${pc(r[4])}`), "lab s" + (hi ? " b" : " m")); });
+});
+
+/* ===== meanings ===== */
+resp(document.getElementById("meaning"), (W, nar) => {
+  const keys = [["CHS", "Cheshire"], ["SHR", "Shropshire"], ["HEF", "Herefordshire"], ["LEC", "Leicestershire"], ["DBY", "Derbyshire"], ["NTT", "Nottinghamshire"], ["STS", "Staffordshire"], ["LIN", "Lincolnshire"]];
+  const parts = [["now", "--hot", "is waste in 1086"], ["part", "--h2", "partly waste"], ["was", "--amb", "was waste, recovered"], ["pre", "--cold", "waste before 1066"], ["other", "--none", "other wording"]];
+  const rowH = 28, m = { l: nar ? 98 : 130, r: 40, t: nar ? 66 : 30, b: 6 }, H = keys.length * rowH + m.t + m.b + 30;
+  const svg = el("svg", { viewBox: `0 0 ${W} ${H}`, role: "img", "aria-label": "How Domesday's text uses waste, by county" }, document.getElementById("meaning"));
+  let lx = 0, lyy = 4; parts.forEach(([k, c, t]) => { if (lx > W - 150) { lx = 0; lyy += 18; } el("rect", { x: lx, y: lyy, width: 11, height: 11, fill: `var(${c})` }, svg); const tt = lbl(svg, lx + 15, lyy + 10, t, "lab s m"); lx += t.length * 7 + 30; });
+  keys.forEach(([k, name], i) => { const r = R.text_reading[k], y = m.t + i * rowH; let x0 = m.l;
+    lbl(svg, m.l - 8, y + 16, nar ? ({ Cheshire: "Cheshire", Shropshire: "Shrops", Herefordshire: "Herefs", Leicestershire: "Leics", Derbyshire: "Derbys", Nottinghamshire: "Notts", Staffordshire: "Staffs", Lincolnshire: "Lincs" }[name]) : name, "lab", "end");
+    parts.forEach(([pk, c, t]) => { const w = r[pk] / r.n * (W - m.l - m.r); if (w <= 0) return; const b = el("rect", { x: x0, y: y + 4, width: w, height: 18, fill: `var(${c})` }, svg);
+      hover(b, `<b>${name}</b><br>${t}: ${r[pk]} of ${r.n} waste entries (${pc(r[pk] / r.n)})`); x0 += w; });
+    lbl(svg, W - m.r + 6, y + 17, r.n, "lab s m"); });
+  const y = m.t + keys.length * rowH + 20; lbl(svg, m.l, y, "n = waste entries with text", "lab s m");
+});
+
+/* ===== wapentakes ===== */
+resp(document.getElementById("hund"), (W, nar) => {
+  const rows = D.hund, rowH = 24, m = { l: nar ? 120 : 210, r: nar ? 52 : 80, t: 22, b: 6 }, H = rows.length * rowH + m.t + m.b;
+  const svg = el("svg", { viewBox: `0 0 ${W} ${H}`, role: "img", "aria-label": "Waste and value by Yorkshire wapentake" }, document.getElementById("hund"));
+  const X = v => m.l + v * (W - m.l - m.r - 10);
+  lbl(svg, m.l, 12, nar ? "share in waste entries" : "share of places in waste entries", "lab s m"); lbl(svg, W - 2, 12, "value 1086", "lab s m", "end");
+  rows.forEach((r, i) => { const y = m.t + i * rowH; const nm = nar ? r[0].replace(" (Richmondshire)", "").replace("Land of Count Alan", "Count Alan").replace(", Lonsdale and Furness", "") : r[0];
+    lbl(svg, m.l - 8, y + 14, nm, "lab s", "end");
+    el("rect", { x: m.l, y: y + 3, width: X(1) - m.l, height: 15, fill: "var(--h0)" }, svg);
+    el("rect", { x: m.l, y: y + 3, width: X(r[3]) - m.l, height: 15, fill: "var(--hot)", opacity: .4 }, svg);
+    const b = el("rect", { x: m.l, y: y + 3, width: Math.max(1, X(r[4]) - m.l), height: 15, fill: "var(--hot)" }, svg);
+    hover(b, `<b>${esc(r[0])}</b><br>${r[2]} places<br>named in a waste entry: ${pc(r[3])}<br>own entry waste: ${pc(r[4])}${r[5] != null ? `<br>value 1086: ${pc(r[5])} of 1066` : ""}`);
+    lbl(svg, X(r[3]) + 7, y + 14, pc(r[3]), "lab s b");
+    lbl(svg, W - 2, y + 14, r[5] != null ? pc(r[5]) : "n/a", "lab s" + (r[5] != null && r[5] < .25 ? " b" : " m"), "end"); });
+});
+
+/* ===== hex map (static) ===== */
+resp(document.getElementById("hexmap"), (W, nar) => {
+  const F = D.hex.filter(f => f.geometry.coordinates[0][0][1] > 52.2);
+  let x0 = 1e9, x1 = -1e9, y0 = 1e9, y1 = -1e9; const k = Math.cos(53.5 * Math.PI / 180);
+  F.forEach(f => f.geometry.coordinates[0].forEach(([lo, la]) => { x0 = Math.min(x0, lo * k); x1 = Math.max(x1, lo * k); y0 = Math.min(y0, la); y1 = Math.max(y1, la); }));
+  const s = Math.min(W / (x1 - x0), (nar ? 560 : 720) / (y1 - y0)), HM = (y1 - y0) * s, H = HM + (nar ? 70 : 0), ox = (W - (x1 - x0) * s) / 2;
+  const svg = el("svg", { viewBox: `0 0 ${W} ${H}`, role: "img", "aria-label": "Hexagon map of waste share in the north and midlands" }, document.getElementById("hexmap"));
+  const PJ = (lo, la) => [ox + (lo * k - x0) * s, (y1 - la) * s];
+  F.forEach(f => { const pts = f.geometry.coordinates[0].map(([lo, la]) => PJ(lo, la).map(v => v.toFixed(1)).join(",")).join(" ");
+    const p = el("polygon", { points: pts, fill: hexCol(f), stroke: "var(--bg)", "stroke-width": .6 }, svg);
+    hover(p, `${f.properties.waste_broad} of ${f.properties.n} places in waste entries${f.properties.ratio != null ? `<br>value 1086: ${pc(f.properties.ratio)} of 1066` : ""}`); });
+  const [yx, yy] = PJ(D.york[1], D.york[0]); el("circle", { cx: yx, cy: yy, r: 5, fill: "var(--bg)", stroke: "var(--fg)", "stroke-width": 2 }, svg); lbl(svg, yx + 8, yy + 4, "York", "lab s b");
+  const towns = [["Chester", 53.19, -2.89], ["Preston", 53.76, -2.70], ["Lincoln", 53.23, -0.54], ["Shrewsbury", 52.71, -2.75], ["Durham", 54.78, -1.57]];
+  towns.forEach(([n, la, lo]) => { const [x, y] = PJ(lo, la); if (y < 0 || y > H) return; el("circle", { cx: x, cy: y, r: 3, fill: "var(--fg)" }, svg); lbl(svg, x + 6, y + 4, n, "lab s"); });
+  const LG = [["--h0", "none"], ["--h1", "under 20%"], ["--h2", "20 to 40%"], ["--h3", "40 to 60%"], ["--h4", "60 to 80%"], ["--h5", "80% or more"]];
+  if (nar) { lbl(svg, 0, HM + 16, "named in waste entries", "lab s m"); LG.forEach(([c, t], i) => { const x = (i % 3) * (W / 3), y = HM + 36 + Math.floor(i / 3) * 18; el("rect", { x, y: y - 10, width: 12, height: 12, fill: `var(${c})`, stroke: "var(--rule)" }, svg); lbl(svg, x + 16, y, t, "lab s"); }); }
+  else { let ly = 16; const lx = W - 150; lbl(svg, lx, ly, "named in waste entries", "lab s m");
+  LG.forEach(([c, t]) => { ly += 17; el("rect", { x: lx, y: ly - 10, width: 12, height: 12, fill: `var(${c})`, stroke: "var(--rule)" }, svg); lbl(svg, lx + 18, ly, t, "lab s"); }); }
+});
+
+/* ===== geography small multiples ===== */
+function bandChart(id, rows, max) {
+  resp(document.getElementById(id), (W) => {
+    const H = 210, m = { l: 34, r: 6, t: 18, b: 44 }, n = rows.length, bw = (W - m.l - m.r) / n;
+    const svg = el("svg", { viewBox: `0 0 ${W} ${H}`, role: "img", "aria-label": "Share of waste places by band" }, document.getElementById(id));
+    const Y = v => H - m.b - v / max * (H - m.t - m.b);
+    [0, .2, .4, .6].filter(t => t <= max).forEach(t => { el("line", { x1: m.l, x2: W - m.r, y1: Y(t), y2: Y(t), stroke: "var(--rule)" }, svg); lbl(svg, m.l - 5, Y(t) + 4, pc(t), "lab m s", "end"); });
+    rows.forEach((r, i) => { const x = m.l + i * bw + bw * .15, w = bw * .7;
+      const b = el("rect", { x, y: Y(r.waste), width: w, height: Y(0) - Y(r.waste), fill: "var(--hot)", opacity: .35 + .65 * r.waste / max }, svg);
+      hover(b, `<b>${r.band}</b><br>${pc(r.waste, 1)} waste, ${r.n} places`);
+      lbl(svg, x + w / 2, Y(r.waste) - 4, pc(r.waste), "lab s b", "middle");
+      lbl(svg, x + w / 2, H - m.b + 14, r.band.replace(" to ", "-").replace("under ", "<"), "lab s", "middle");
+      lbl(svg, x + w / 2, H - m.b + 28, "n " + r.n, "lab s m", "middle"); });
+  });
+}
+bandChart("gYork", D.geo.york, .6); bandChart("gElev", D.geo.elev, .6); bandChart("gRoman", D.geo.roman, .6);
+
+/* ===== logit table ===== */
+(() => { const L_ = R.geo_logit, names = { york10: "10 km farther from York", elev100: "100 m higher", relief50: "50 m more relief within 1 km", roman5: "5 km farther from a Roman road", river_km: "1 km farther from a named river" };
+  document.getElementById("logit").innerHTML = `<thead><tr><th>Step</th><th class="num">Odds ratio</th><th class="num">95% interval</th><th class="num">p</th></tr></thead><tbody>` +
+    Object.keys(names).map(k => `<tr><td>${names[k]}</td><td class="num"><b>${L_[k].or.toFixed(2)}</b></td><td class="num">${L_[k].lo.toFixed(2)} to ${L_[k].hi.toFixed(2)}</td><td class="num">${L_[k].p < .001 ? "<0.001" : L_[k].p.toFixed(2)}</td></tr>`).join("") + "</tbody>"; })();
+
+/* ===== forest plot ===== */
+resp(document.getElementById("forest"), (W, nar) => {
+  const rows = D.ls, rowH = nar ? 66 : 46, m = { l: nar ? 8 : 260, r: 20, t: 26, b: 30 }, H = rows.length * rowH + m.t + m.b;
+  const svg = el("svg", { viewBox: `0 0 ${W} ${H}`, role: "img", "aria-label": "Differences between waste places and similar places today" }, document.getElementById("forest"));
+  const lo = -0.4, hi = 1.4, X = v => m.l + (Math.max(lo, Math.min(hi, v)) - lo) / (hi - lo) * (W - m.l - m.r);
+  [-0.25, 0, 0.5, 1].forEach(t => { el("line", { x1: X(t), x2: X(t), y1: m.t - 6, y2: H - m.b, stroke: t === 0 ? "var(--fg)" : "var(--rule)", "stroke-width": t === 0 ? 1.4 : 1 }, svg); lbl(svg, X(t), H - m.b + 16, (t > 0 ? "+" : "") + Math.round(t * 100), "lab s m", "middle"); });
+  lbl(svg, X(0) + 6, m.t - 10, "waste places higher →", "lab s m"); lbl(svg, X(0) - 6, m.t - 10, "← lower", "lab s m", "end");
+  rows.forEach((r, i) => { const y = m.t + i * rowH + (nar ? 30 : 18);
+    lbl(svg, nar ? 0 : m.l - 12, nar ? y - 20 : y + 4, r.label + (r.kind === "pp" ? " (pp)" : " (%)"), "lab" + (nar ? " s" : ""), nar ? "start" : "end");
+    el("line", { x1: X(r.lo), x2: X(r.hi), y1: y, y2: y, stroke: "var(--hot)", "stroke-width": 3 }, svg);
+    const c = el("circle", { cx: X(r.est), cy: y, r: 6.5, fill: r.lo > 0 || r.hi < 0 ? "var(--hot)" : "var(--bg)", stroke: "var(--hot)", "stroke-width": 2.4 }, svg);
+    const u = r.kind === "pp" ? " points" : "%";
+    hover(c, `<b>${r.label}</b><br>difference ${(r.est * 100).toFixed(1)}${u}<br>95% interval ${(r.lo * 100).toFixed(1)} to ${(r.hi * 100).toFixed(1)}<br>${r.n} places (${r.n_waste} waste)`);
+    lbl(svg, X(r.hi) + 8, y + 4, (r.est > 0 ? "+" : "") + (r.est * 100).toFixed(1) + u, "lab s b"); });
+});
+
+/* ===== Lancashire map ===== */
+(() => {
+  if (!window.L) return;
+  const m2 = L.map("lmap2", { zoomSnap: 0.5, minZoom: 7, maxZoom: 14, scrollWheelZoom: false });
+  m2.setView([53.95, -2.55], 9);
+  const t2 = L.tileLayer(tileUrl(), { attribution: 'Tiles &copy; Esri, HERE, Garmin, &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, and the GIS user community', maxZoom: 16 }).addTo(m2);
+  m2.on("click focus", () => m2.scrollWheelZoom.enable());
+  let g2;
+  const go = () => { if (g2) m2.removeLayer(g2); g2 = L.layerGroup(); const bg = css("--bg");
+    L.circle([53.87494, -2.38744], { radius: 15000, color: css("--fg"), weight: 1.2, dashArray: "4 6", fill: false }).addTo(g2);
+    L.circleMarker([53.87494, -2.38744], { radius: 5, color: css("--fg"), weight: 2, fillColor: bg, fillOpacity: 1 }).bindTooltip("Clitheroe (not in Domesday)").addTo(g2);
+    D.lan.forEach(a => { const c = a[4] ? css("--hot") : css("--cold");
+      L.circleMarker([a[0], a[1]], a[5] ? { radius: 6, weight: 1, color: bg, fillColor: c, fillOpacity: .95 } : { radius: 5, weight: 2, color: c, fillColor: bg, fillOpacity: .6 })
+        .bindTooltip(`<b>${esc(a[2])}</b><br>${esc(a[3])}<br>${a[4] ? "named in a waste entry" : "not called waste"}${a[6] ? "<br>today: " + esc(a[6]) : ""}`).addTo(g2); });
+    g2.addTo(m2); };
+  go(); redraws.push(() => { t2.setUrl(tileUrl()); go(); });
+})();
+</script>
+</body>
+</html>
